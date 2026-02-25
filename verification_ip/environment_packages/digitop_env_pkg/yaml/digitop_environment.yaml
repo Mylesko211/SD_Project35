@@ -1,0 +1,38 @@
+uvmf:
+  environments:
+    digitop:
+      agents:
+      - initiator_responder: INITIATOR
+        name: i2c_a
+        parameters:
+        - name: I2C_ADDR_WIDTH
+          value: '7'
+        - name: I2C_DATA_WIDTH
+          value: '8'
+        - name: I2C_SLAVE_ADDRESS
+          value: 8'h22
+        type: i2c
+      analysis_components: []
+      analysis_exports: []
+      analysis_ports: []
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      hvl_pkg_parameters: []
+      non_uvmf_components: []
+      parameters: []
+      qvip_memory_agents: []
+      register_model:
+        maps:
+        - interface: i2c_a
+          interface_type: uvmf
+          name: bus_map
+          qvip_agent: 'False'
+        reg_adapter_class: i2c_reg_adapter
+        reg_block_class: reg_block
+        reg_model_package: reg_model_pkg
+        use_adapter: 'True'
+        use_explicit_prediction: 'True'
+      scoreboards: []
+      subenvs: []
+      tlm_connections: []

@@ -1,0 +1,6 @@
+@use $UVMF_HOME/uvmf_base_pkg/uvmf_base_pkg_hdl.vinfo
+@use i2c_pkg_hdl.vinfo
++incdir+@vinfodir
+src/i2c_if.sv
+src/i2c_driver_bfm.sv
+src/i2c_monitor_bfm.sv
