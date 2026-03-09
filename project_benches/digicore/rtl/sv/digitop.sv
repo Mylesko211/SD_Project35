@@ -60,7 +60,7 @@ module digitop (
     // Reg-map -> Watchdog
     logic [7:0] WD_reg;	
     logic WD_flag;
-/*
+
 	// I2C Module
 	i2c_follower_module i2c_slave_inst (
 	  .rst_n       (rst),
@@ -73,7 +73,7 @@ module digitop (
 	  .data_out_o  (i2c_reg_data),
 	  .valid_out_o (i2c_reg_valid)
 	);
-*/
+
     // REG_MAP_TOP, contains FSM and REG_MAP
     
     REG_MAP_TOP reg_map_top_inst (
@@ -107,7 +107,7 @@ module digitop (
         .WD_timeout		(WD_flag),
 		.WD_reg			(WD_reg),
 
-        .test_flag      (test_flag)
+        .test_flag      ()
     );
 
     // Watchdog

@@ -2,57 +2,52 @@
 <!DOCTYPE visualizer_session>
 <session version="3" skip_do_file="0">
  <app argc="9">
-  <argv pos="0" value="vsim"/>
-  <argv pos="1" value="+onfinish+stop"/>
-  <argv pos="2" value="+uvm_set_config_int=*,enable_transaction_viewing,1"/>
-  <argv pos="3" value="+UVM_TESTNAME=test_top"/>
-  <argv pos="4" value="+uvm_set_config_int=*,enable_transaction_viewing,1"/>
-  <argv pos="5" value="design.bin"/>
-  <argv pos="6" value="-do"/>
-  <argv pos="7" value="set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb;run 0; do /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/viswave.do"/>
-  <argv pos="8" value="+_sv_debug_+vsim-64-onfinishstop-classdebug+uvm_set_config_int=*,enable_transaction_viewing,1-permit_unmatched_virtual_intf-sv_seed0-msglimiterror-msglimitcount20+UVM_TESTNAME=test_top-qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc+transaction+uvm_set_config_int=*,enable_transaction_viewing,1-libqrun.out/work-visualizer=design.bin-statslogqrun.out/stats_logqrun_opt-suppress8887,2286-appendlog"/>
+  <argv value="vsim" pos="0"/>
+  <argv value="+onfinish+stop" pos="1"/>
+  <argv value="+uvm_set_config_int=*,enable_transaction_viewing,1" pos="2"/>
+  <argv value="+UVM_TESTNAME=test_top" pos="3"/>
+  <argv value="+uvm_set_config_int=*,enable_transaction_viewing,1" pos="4"/>
+  <argv value="design.bin" pos="5"/>
+  <argv value="-do" pos="6"/>
+  <argv value="set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb;run 0; do /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/viswave.do" pos="7"/>
+  <argv value="+_sv_debug_+vsim-64-onfinishstop-classdebug+uvm_set_config_int=*,enable_transaction_viewing,1-permit_unmatched_virtual_intf-sv_seed0-msglimiterror-msglimitcount20+UVM_TESTNAME=test_top-qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc+transaction+uvm_set_config_int=*,enable_transaction_viewing,1-libqrun.out/work-visualizer=design.bin-statslogqrun.out/stats_logqrun_opt-suppress8887,2286-appendlog" pos="8"/>
  </app>
  <window_config>
-  <dockareas top="0" bottom="266" left="365" right="645"/>
-  <taborder bottom="transcript+" left="testbench+files+structure+" right="variables+"/>
-  <activetab bottom="transcript" left="testbench" right="variables" activewindow="testbench"/>
-  <window x="0" visible="1" type="testbench" y="0" dock_location="left" undocked="0"/>
-  <window x="0" visible="1" type="files" y="0" dock_location="left" undocked="0"/>
-  <window x="0" visible="1" type="structure" y="0" dock_location="left" undocked="0"/>
-  <window x="0" visible="1" type="variables" y="0" dock_location="right" undocked="0"/>
-  <window x="0" visible="1" type="transcript" y="0" dock_location="bottom" undocked="0"/>
-  <window x="0" visible="1" width="2574" type="rtl" y="64" height="1534" undocked="0"/>
-  <window x="572" visible="0" width="2472" type="wave" y="244" dock_location="bottom" height="1810" undocked="1"/>
-  <window x="0" firstVisibleLine="24" visible="0" type="source" y="0" dock_location="center" path="/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv" undocked="0"/>
-  <window x="0" firstVisibleLine="416" visible="1" type="source" y="0" dock_location="center" path="/mnt/apps/public/COE/mg_apps/questa2024.2/questasim/verilog_src/uvm-1.1d/src/base/uvm_root.svh" id="1" undocked="0"/>
+  <dockareas left="365" bottom="266" right="645" top="0"/>
+  <taborder left="testbench+files+structure+" bottom="transcript+" right="variables+"/>
+  <activetab left="structure" bottom="transcript" right="variables" activewindow="transcript"/>
+  <window x="0" type="testbench" dock_location="left" visible="1" undocked="0" y="0"/>
+  <window x="0" type="files" dock_location="left" visible="1" undocked="0" y="0"/>
+  <window x="0" type="structure" dock_location="left" visible="1" undocked="0" y="0"/>
+  <window x="0" type="variables" dock_location="right" visible="1" undocked="0" y="0"/>
+  <window x="0" type="transcript" dock_location="bottom" visible="1" undocked="0" y="0"/>
+  <window x="0" type="rtl" width="2574" visible="1" height="1534" undocked="0" y="64"/>
+  <window x="572" type="wave" width="2472" dock_location="bottom" visible="0" height="1810" undocked="1" y="244"/>
+  <window path="/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv" x="0" type="source" dock_location="center" visible="1" firstVisibleLine="24" undocked="0" y="0"/>
  </window_config>
  <wave_file_mgr>
-  <waveFile fileName="/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qwave.db" tagName="sim" waveType="0"/>
+  <waveFile tagName="sim" fileName="/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qwave.db" waveType="0"/>
  </wave_file_mgr>
  <gui>
   <main_window visible="1">
-   <srcbrowser instancename="hdl_top" filepath="/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv"/>
+   <srcbrowser instancename="hdl_top" primary="true" filepath="/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv"/>
    <sourcetclcommands>
     <tcl command="src activate source"/>
     <tcl command="src top 25"/>
    </sourcetclcommands>
-   <srcbrowser filepath="/mnt/apps/public/COE/mg_apps/questa2024.2/questasim/verilog_src/uvm-1.1d/src/base/uvm_root.svh" primary="true"/>
-   <sourcetclcommands>
-    <tcl command="src activate source1"/>
-    <tcl command="src top 417"/>
-   </sourcetclcommands>
    <edge_gui cur_selection="AnyEdge"/>
   </main_window>
-  <watchTower_cur_setting customDisplayTimeUnitListStr="" curActiveWaveFile="sim" curRadix="8" curDisplayTimeUnitStr="1us" curDisplayTimeUnit="-6">
-   <curTime lowtime="142489209" hightime="0"/>
+  <watchTower_cur_setting curDisplayTimeUnitStr="1us" customDisplayTimeUnitListStr="" curDisplayTimeUnit="-6" curActiveWaveFile="sim" curRadix="8">
+   <curTime hightime="0" lowtime="0"/>
   </watchTower_cur_setting>
   <testbench/>
   <files/>
   <structure selection="hdl_top"/>
-  <variables UPF="0" VA="0" CA="0"/>
+  <variables CA="0" VA="0" UPF="0"/>
   <transcript/>
  </gui>
  <wave_mgr sync_time_range="0"/>
  <mem_mgr/>
  <windows/>
+ <dut selection="hdl_top"/>
 </session>

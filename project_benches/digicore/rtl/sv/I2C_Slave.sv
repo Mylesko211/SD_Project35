@@ -20,6 +20,8 @@ module i2c_follower_module #(
   logic         op;
   logic         sda_drive;
   logic         master_ack;
+  logic         stop_detected;
+  logic         start_detected;
 
   //----------------------------------------------------------
   // FSM states
@@ -34,16 +36,19 @@ module i2c_follower_module #(
         DATA_RECV_DATA  = 4'd7,   // WRITE byte 1
         M_ACK           = 4'd8,
         ACK_2           = 4'd9,
-        ACK_3           = 4'd10
+        ACK_3           = 4'd10,
+        WAIT_STOP       = 4'd11
     } state_t;
 
   state_t state;
+  state_t next_state;
 
   //----------------------------------------------------------
   // Open-drain SDA
   //----------------------------------------------------------
   assign sda = (sda_drive) ? 1'b0 : 1'bz;
 
+/*
   //----------------------------------------------------------
   // START condition (unchanged)
   //----------------------------------------------------------
@@ -67,6 +72,75 @@ module i2c_follower_module #(
           bit_count <= 0;
       end
   end
+*/
+
+always @(negedge sda) begin
+    if(state == WAIT_STOP | state == WAIT_START) begin
+        if((scl & !sda) | start_detected) start_detected <= 1;
+        else start_detected <= 0;
+    end
+    else start_detected <= 0;
+end
+
+always @(posedge sda) begin
+    if(state == WAIT_STOP) begin
+        if((scl & sda) | stop_detected) stop_detected <= 1;
+        else stop_detected <= 0;
+    end
+    else stop_detected <= 0;
+end
+
+  //----------------------------------------------------------
+  // NEXT state logic
+  //----------------------------------------------------------
+  always_comb begin
+    casex ({sda, scl, state})  
+            6'b01_0001: next_state = ADDR_RECV;       // START condition (in WAIT_START)
+            6'bx1_0010: begin // (ADDR_RECV)
+                if(bit_count == 5) next_state = RW_BIT;  // After receiving 7 bits of address
+                else next_state = ADDR_RECV;
+            end
+            6'bx1_0011: begin // (RW_BIT)
+                if (slave_addr == SLAVE_ADDRESS) next_state = ACK_1;
+                else next_state = WAIT_START; 
+            end
+            6'bx1_0100: begin // (ACK_1)
+                if (op) next_state = DATA_SEND;  // READ
+                else next_state = DATA_RECV_REG; // WRITE
+            end
+            6'bx1_0101: begin // (DATA_SEND)
+                if (bit_count == 0) next_state = M_ACK; // After sending 8 bits
+                else next_state = DATA_SEND;
+            end
+            6'bx1_0110: begin // (DATA_RECV_REG)
+                if(bit_count == 7) next_state = ACK_2; // After receiving 8 bits (reg addr)
+                else next_state = DATA_RECV_REG;
+            end
+            6'bx1_0111: begin // (DATA_RECV_DATA)
+                if(bit_count == 7) next_state = ACK_3; // After receiving 8 bits (data)
+                else next_state = DATA_RECV_DATA;
+            end
+            6'b01_1000: begin // (M_ACK)
+                next_state = DATA_SEND; 
+            end
+            6'b11_1000: begin // (M_ACK)
+                if(op) next_state = WAIT_STOP;  
+                else next_state = DATA_RECV_DATA; 
+            end
+            6'bx1_1001: begin // (ACK_2)
+                next_state = DATA_RECV_DATA;
+            end
+            6'bx1_1010: begin // (ACK_3)
+                next_state = WAIT_STOP;
+            end
+            6'bxx_1011: begin
+                if(stop_detected & start_detected) next_state = ADDR_RECV;
+                else if(stop_detected) next_state = WAIT_START;
+                else next_state = WAIT_STOP;
+            end
+            default: next_state = state;  // Hold current state
+    endcase
+  end
 
   //----------------------------------------------------------
   // Main FSM (posedge SCL ONLY)
@@ -82,52 +156,49 @@ module i2c_follower_module #(
         op          <= 1'b0;
         op_o        <= 1'b0;
     end else begin
-
+        state <= next_state;  // Update state on clock edge
         case (state)
 
         WAIT_START: begin
+            slave_addr  <= 7'd0;
+            reg_addr_o  <= 8'd0;
+            data_out_o  <= 8'd0;
+            valid_out_o <= 1'b0;
+            bit_count   <= 4'd0;
+            op          <= 1'b0;
+            op_o        <= 1'b0;
         end
 
         ADDR_RECV: begin
-            slave_addr <= {slave_addr[5:0], sda};
-            bit_count  <= bit_count + 1;
-            if (bit_count == 6) begin
+            if (bit_count == 5) begin
                 bit_count <= 0;
-                state <= RW_BIT;
+                slave_addr <= {slave_addr[5:0], sda};
+            end    
+            else begin
+                slave_addr <= {slave_addr[5:0], sda};
+                bit_count  <= bit_count + 1;
             end
         end
 
         RW_BIT: begin
             op <= sda;
-            if (slave_addr == SLAVE_ADDRESS)
-                state <= ACK_1;
-            else
-                state <= WAIT_START;
         end
 
         ACK_1: begin
             op_o <= op;
             if (op) begin
-                // READ
-                state <= DATA_SEND;
                 bit_count <= 7;
             end else begin
-                // WRITE → first byte = register address
-                state <= DATA_RECV_REG;
                 bit_count <= 0;
             end
         end
 
         ACK_2: begin
-            // WRITE → first byte = register address
-            state <= DATA_RECV_DATA;
             bit_count <= 0;
         end
         
         ACK_3: begin
             valid_out_o <= 1'b0;
-            // WRITE → first byte = register address
-            state <= WAIT_START;
             bit_count <= 0;
         end
         // -------------------------
@@ -139,7 +210,6 @@ module i2c_follower_module #(
 
             if (bit_count == 7) begin
                 bit_count <= 0;
-                state <= ACK_2;  // ACK reg address
             end
         end
 
@@ -153,7 +223,7 @@ module i2c_follower_module #(
             if (bit_count == 7) begin
                 valid_out_o <= 1'b1;  //
                 bit_count <= 0;
-                state <= ACK_3;
+                // state <= ACK_3;
             end
         end
 
@@ -161,26 +231,34 @@ module i2c_follower_module #(
         // READ path (unchanged)
         // -------------------------
         DATA_SEND: begin
-            if (bit_count == 0)
-                state <= M_ACK;
-            else
-                bit_count <= bit_count - 1;
+            if (bit_count != 0) bit_count <= bit_count - 1;
         end
 
         M_ACK: begin
+            if (~sda) bit_count <= 7;
+            /*
             if (~sda) begin
                 bit_count <= 7;
-                state <= DATA_SEND;
+                // state <= DATA_SEND;
             end else begin
                 // After reg addr ACK, move to data byte
                 if (!op)
-                    state <= DATA_RECV_DATA;
+                    // state <= DATA_RECV_DATA;
                 else
-                    state <= WAIT_START;
+                    // state <= WAIT_START;
             end
+            */
         end
 
-        default: state <= WAIT_START;
+        default: begin 
+            slave_addr  <= 7'd0;
+            reg_addr_o  <= 8'd0;
+            data_out_o  <= 8'd0;
+            valid_out_o <= 1'b0;
+            bit_count   <= 4'd0;
+            op          <= 1'b0;
+            op_o        <= 1'b0;
+        end
         endcase
     end
 end

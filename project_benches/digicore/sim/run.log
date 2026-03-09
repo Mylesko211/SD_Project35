@@ -5,7 +5,7 @@
 
 # vsim -64 -onfinish stop -classdebug +uvm_set_config_int=*,enable_transaction_viewing,1 -permit_unmatched_virtual_intf -sv_seed 0 -msglimit error -msglimitcount 20 +UVM_TESTNAME=test_top -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc+transaction +uvm_set_config_int=*,enable_transaction_viewing,1 -lib qrun.out/work -visualizer=design.bin -do {set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb;run 0; do /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/viswave.do} -statslog qrun.out/stats_log qrun_opt -suppress 8887,2286 -appendlog -l run.log
 # vsim -64 -onfinish stop -classdebug "+uvm_set_config_int=*,enable_transaction_viewing,1" -permit_unmatched_virtual_intf -sv_seed 0 -msglimit error -msglimitcount 20 "+UVM_TESTNAME=test_top" -qwavedb=+livesim+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc+transaction "+uvm_set_config_int=*,enable_transaction_viewing,1" -lib qrun.out/work -visualizer=design.bin -statslog qrun.out/stats_log qrun_opt -suppress 8887,2286 -appendlog "+no_qwavedb_threading" 
-# Start time: 14:54:20 on Feb 25,2026
+# Start time: 01:52:21 on Mar 09,2026
 # Loading Siemens Visualizer shared object '/mnt/apps/public/COE/mg_apps/questa2024.2/questasim/bin/../linux_x86_64/VisualizerRls/bin/libqvisualizer.so'
 
 # Initiating qwavedb class logging
@@ -54,9 +54,9 @@
 # Loading work.vhdl_dut(rtl)#1
 # Loading /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
 
-# 14:54:26: Loading design data...
-# 14:54:26: Loaded  design units
-# 14:54:26: Loaded  design hierarchy
+# 01:52:35: Loading design data...
+# 01:52:35: Loaded  design units
+# 01:52:35: Loaded  design hierarchy
 # 	 Class Filter File used = /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt
 # set IterationLimit 140000
 # 140000
@@ -121,85 +121,33 @@
 # UVM_WARNING /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/environment_packages/digitop_env_pkg/src/digitop_env_configuration.svh(64) @ 0.000ns: reporter [COVERAGE_MODEL_REVIEW] A covergroup has been constructed which may need review because of either generation or re-generation with merging.  Please note that configuration variables added as a result of re-generation and merging are not automatically added to the covergroup.  Remove this warning after the covergroup has been reviewed.
 # include_coverage not located
 #   did you mean recording_detail?
-# 14:54:39: Loading waveform header...
-# 14:54:39: Loaded  waveform header
+# 01:52:43: Loading waveform header...
+# 01:52:43: Loaded  waveform header
 
 # do /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/viswave.do
 
-# **************************************************************************
-# * Questa UVM Transaction Recording Turned ON.                            *
-# * recording_detail has been set.                                         *
-# *  To turn off, set 'recording_detail' to off:                           *
-# * uvm_config_db#(int)            ::set(null, "", "recording_detail", 0); *
-# * uvm_config_db#(uvm_bitstream_t)::set(null, "", "recording_detail", 0); *
-# **************************************************************************
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 304022.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x1a data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 607782.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x35 data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 911542.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x70 data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 1215302.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x63 data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 1519062.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x39 data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 1822822.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x33 data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 2126582.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x66 data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 2430342.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x19 data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 2734102.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x24 data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 3037862.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x18 data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 3341622.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x6f data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 3645382.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x75 data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 3949142.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x08 data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 4252902.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x68 data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 4556662.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x5e data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 4860422.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x4f data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 5164182.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x76 data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 5467942.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x56 data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 5771702.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x25 data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 6075462.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x7f data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 6379222.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x51 data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 6682982.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x0f data:'{} op:0x00000000 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 6986742.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x2a data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 7290502.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x5c data:'{} op:0x00000001 
-# UVM_INFO /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_random_sequence.svh(65) @ 7594262.000ns: uvm_test_top.environment.i2c_a.sequencer@@i2c_a_random_seq [SEQ] Response:addr:0x0f data:'{} op:0x00000001 
-# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 7598259.000ns: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
-# 
-# --- UVM Report Summary ---
-# 
-# ** Report counts by severity
-# UVM_INFO :   31
-# UVM_WARNING :    1
-# UVM_ERROR :    0
-# UVM_FATAL :    0
-# ** Report counts by id
-# [COVERAGE_MODEL_REVIEW]     1
-# [Questa UVM]     2
-# [RNTST]     1
-# [SEQ]    25
-# [TEST_DONE]     1
-# [UVM_CMDLINE_PROC]     2
-# ** Note: $finish    : /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
-#    Time: 7598259 ns  Iteration: 60  Instance: .hvl_top
-# Stopped at /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
-# Break in Task uvm_root::run_test at /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
 # Window layout 'Default' saved in file: /mnt/ncsudrive/m/mkoakley/.visualizer/layout.xml
 # Saving coverage database on exit...
 # Disable bg thread...
-# qwavedb_dumpvars : Simulation ending at [1 3303291704] 0
+# qwavedb_dumpvars : Simulation ending at [0 0] 0
 # ========= Visualizer Dump Summary report =========
-# 	 #Design Ids       = 2487
+# 	 #Design Ids       = 2498
 # 	 #Class Ids        = 2212 (Recycled = 0)
-# 	 #Transaction Ids  = 2
-# 	 #Message Ids      = 10
-# 	 #Total Ids        = 2502
-# 	 #Swaps            = 15
-# 	  Id Memory        = 240.19 KB
+# 	 #Transaction Ids  = 1
+# 	 #Message Ids      = 6
+# 	 #Total Ids        = 2508
+# 	 #Swaps            = 5
+# 	  Id Memory        = 240.77 KB
 # 	  Swap Memory      = 50.00 MB
 # ========= End of Visualizer Dump Summary report =========
-# End time: 14:57:05 on Feb 25,2026, Elapsed time: 0:02:45
+# End time: 01:52:51 on Mar 09,2026, Elapsed time: 0:00:30
 # Errors: 0, Warnings: 0
-# Start  : Wed 25 Feb 2026 02:54:06 PM EST
-# End    : Wed 25 Feb 2026 02:57:05 PM EST
-# VMSize : 7112048 kB
-# VMPeak : 7217188 kB
-# MaxRSS : 321692 kB
-End time: 14:57:06 on Feb 25,2026, Elapsed time: 0:03:13
+# Start  : Mon 09 Mar 2026 01:51:45 AM EDT
+# End    : Mon 09 Mar 2026 01:52:52 AM EDT
+# VMSize : 7138448 kB
+# VMPeak : 7140084 kB
+# MaxRSS : 313888 kB
+End time: 01:52:53 on Mar 09,2026, Elapsed time: 0:01:30
 *** Summary *********************************************
     qrun: Errors:   0, Warnings:   0
     vlog: Errors:   0, Warnings:   0
