@@ -2,6 +2,7 @@
 // Created with uvmf_gen version 2023.4_2
 //----------------------------------------------------------------------
 `timescale 1ns / 1ps
+
 // pragma uvmf custom header begin
 // pragma uvmf custom header end
 //----------------------------------------------------------------------
@@ -115,18 +116,29 @@ import uvmf_base_pkg_hdl::*;
                                  .CLK_GD_I(clk_gd_i),
                                  .PORZ(porz),
                                  .trim_done(trim_done),
-                                 //.otp_do_i(otp_do_i),
-                                 //.otp_cs_o(otp_cs_o),
-                                 //.otp_prog_o(otp_prog_o),
-                                 //.otp_read_o(otp_read_o),
-                                 //.otp_en_prog_vpp_o(otp_en_prog_vpp_o),
-                                 //.otp_en_read_vpp_o(otp_en_read_vpp_o),
-                                 //.otp_adr_o(otp_adr_o),
-                                 //.otp_din_o(otp_din_o),
+                                 .otp_do_i(otp_do_i),
+                                 .otp_cs_o(otp_cs_o),
+                                 .otp_prog_o(otp_prog_o),
+                                 .otp_read_o(otp_read_o),
+                                 .otp_en_prog_vpp_o(otp_en_prog_vpp_o),
+                                 .otp_en_read_vpp_o(otp_en_read_vpp_o),
+                                 .otp_adr_o(otp_adr_o),
+                                 .otp_din_o(otp_din_o),
                                  .i2c_scl(i2c_a_bus.scl),
                                  .i2c_sda(i2c_a_bus.sda)
                                  );
   vhdl_dut            dut_vhdl   (   .clk(clk), .rst(rst), .in_signal(verilog_to_vhdl_signal), .out_signal(vhdl_to_verilog_signal));
+
+  otp_model          otp_model_inst ( .otp_cs_i(otp_cs_o),
+                                 .otp_prog_i(otp_prog_o),
+                                 .otp_read_i(otp_read_o),
+                                 .otp_en_prog_vpp_i(otp_en_prog_vpp_o),
+                                 .otp_en_read_vpp_i(otp_en_read_vpp_o),
+                                 .otp_adr_i(otp_adr_o),
+                                 .otp_din_i(otp_din_o),
+                                 .otp_do_o(otp_do_i)
+                                 );
+
   // pragma uvmf custom dut_instantiation end
 
   initial begin      import uvm_pkg::uvm_config_db;

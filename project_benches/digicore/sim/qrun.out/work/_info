@@ -30,6 +30,7 @@ R0
 R0
 R0
 R0
+R0
 !s11e MIXED_VERSIONS
 !s11f vlog 2024.2 2024.05, May 20 2024
 13
@@ -68,6 +69,7 @@ Z10 o-suppress 8887,2286 -msglimit error -msglimitcount 20 -work qrun.out/work -
 Z11 !s92 -suppress 8887,2286 +incdir+/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg +incdir+/mnt/apps/public/COE/mg_apps/questa2024.2/questasim/verilog_src/uvm-1.1d/src +incdir+/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench -msglimit error -msglimitcount 20 -work qrun.out/work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 Z12 tCvgOpt 0
 Xdigicore_sequences_pkg
+!i114 1
 !i114 1
 !i114 1
 R2
@@ -137,6 +139,7 @@ R10
 R11
 R12
 Xdigicore_tests_pkg
+!i114 1
 !i114 1
 !i114 1
 R2
@@ -209,29 +212,29 @@ R12
 vdigitop
 R2
 R3
-Z46 DXx4 work 15 digitop_sv_unit 0 22 l=TMhEo1KIiXdFU2EJO?41
-Z47 !s110 1774656310
+Z46 DXx4 work 15 digitop_sv_unit 0 22 4^D?1H5Ve5o6ziVJhncHL0
+Z47 !s110 1774663409
 Z48 VDg1SIo80bB@j0V0VzS_@n1
 r1
 !s85 0
 !i10b 1
-!s100 G^In_jKgiXMjo?Q@90g3L2
-I0A=C0Aa5HW>DERk5:CHVL3
+!s100 >IPAk9BZ<i_U6CER2fkYL2
+IaIgNQj@f4MXVN9de_F4PC2
 Z49 !s105 digitop_sv_unit
 S1
 R1
-Z50 w1774656304
+Z50 w1774663236
 Z51 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/digitop.sv
 Z52 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/digitop.sv
-Z53 !s120 <hoDGVdZJjcSOQe=;XUA63
+Z53 !s120 _DjP6o0^BNblE84FhZM780
 Z54 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/Reg_Map.sv
 Z55 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/Reg_Map.sv
 Z56 !s120 3<i<?gSNeAclfRomY>jWI3
-!i122 46
-L0 10 169
+!i122 47
+L0 10 145
 R6
 31
-Z57 !s108 1774656310.000000
+Z57 !s108 1774663409.000000
 Z58 !s107 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/I2C_Slave.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/Reg_Map.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/FSM.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/Reg_Map_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/otp_ctrl.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/watchDog.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/OTP_model.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/verilog/verilog_dut.v|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/digitop.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hvl_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/tests/digicore_tests_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/sequences/digicore_sequences_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/parameters/digicore_parameters_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/environment_packages/digitop_env_pkg/digitop_env_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/environment_packages/digitop_env_pkg/registers/reg_model_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_driver_bfm.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_monitor_bfm.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/i2c_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/i2c_pkg_hdl.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_hdl.sv|
 R9
 !i113 0
@@ -239,6 +242,7 @@ R10
 R11
 R12
 Xdigitop_env_pkg
+!i114 1
 !i114 1
 !i114 1
 R2
@@ -309,12 +313,12 @@ Xdigitop_sv_unit
 R2
 R3
 R47
-Vl=TMhEo1KIiXdFU2EJO?41
+V4^D?1H5Ve5o6ziVJhncHL0
 r1
 !s85 0
 !i10b 1
-!s100 =Z1i;BZNezN4?a2zeVb9C0
-Il=TMhEo1KIiXdFU2EJO?41
+!s100 NBZWBFC]62=_IS91WImFU2
+I4^D?1H5Ve5o6ziVJhncHL0
 !i103 1
 S1
 R1
@@ -336,7 +340,7 @@ R55
 R56
 Z70 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/I2C_Slave.sv
 Z71 !s120 6WFOjWVnTDN;@W8BNZbX=0
-!i122 46
+!i122 47
 L0 23 0
 R6
 31
@@ -365,7 +369,7 @@ Z72 w1773020994
 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/FSM.sv
 R68
 R69
-!i122 46
+!i122 47
 L0 42 86
 R6
 31
@@ -378,30 +382,30 @@ R11
 R12
 n@f@s@m
 vhdl_top
+R2
 R3
 R4
 R17
 R13
-!s110 1774656238
+!s110 1774663471
 !i10b 1
-!s100 EA>@Ll`a=9NUCE;joNHL>3
-IonfC<YgUM2;nlBC8LXaOg3
-R49
+!s100 XAdYAaQlZBGCIk_J[:jh72
+IO5e38HFDLYdl:^PW;Am8K0
 S1
 R1
-w1774656045
+w1774663467
 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv
 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv
-!s120 chOJjK<RM[5:do<_KU6h32
-!i122 44
-L0 25 128
+!s120 0<F?XJk@_bVJXCm?JM6I_1
+!i122 48
+L0 26 139
 R48
 R6
 r1
 !s85 0
 31
-!s108 1774656236.000000
-Z73 !s107 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/I2C_Slave.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/Reg_Map.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/FSM.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/Reg_Map_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/otp_ctrl.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/watchDog.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/verilog/verilog_dut.v|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/digitop.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hvl_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/tests/digicore_tests_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/sequences/digicore_sequences_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/parameters/digicore_parameters_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/environment_packages/digitop_env_pkg/digitop_env_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/environment_packages/digitop_env_pkg/registers/reg_model_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_driver_bfm.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_monitor_bfm.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/i2c_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/i2c_pkg_hdl.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_hdl.sv|
+!s108 1774663470.000000
+!s107 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/verilog/verilog_dut.v|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/digitop.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hvl_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/tests/digicore_tests_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/sequences/digicore_sequences_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/parameters/digicore_parameters_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/environment_packages/digitop_env_pkg/digitop_env_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/environment_packages/digitop_env_pkg/registers/reg_model_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_driver_bfm.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_monitor_bfm.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/i2c_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/i2c_pkg_hdl.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_hdl.sv|
 R9
 !i113 0
 R10
@@ -464,9 +468,9 @@ I5P?nPn;h;PgAnRF:hn8F03
 S1
 R1
 R59
-Z74 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_driver_bfm.sv
-Z75 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_driver_bfm.sv
-Z76 !s120 zLU_[jd7zOCZH[gIz_6la2
+Z73 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_driver_bfm.sv
+Z74 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_driver_bfm.sv
+Z75 !s120 zLU_[jd7zOCZH[gIz_6la2
 R20
 R21
 R22
@@ -521,9 +525,9 @@ IYz5e`TRSM8QUN7gY>EJX81
 S1
 R1
 R59
+R73
 R74
 R75
-R76
 !i122 43
 L0 56 0
 R6
@@ -554,7 +558,7 @@ R70
 R71
 R55
 R56
-!i122 46
+!i122 47
 L0 2 297
 R6
 31
@@ -582,9 +586,9 @@ IN5Hf]iH9`K2a?4heJoJk73
 S1
 R1
 R59
-Z77 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv
-Z78 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv
-Z79 !s120 ^Ke4:z?lHI<BjDRMRV20S3
+Z76 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv
+Z77 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv
+Z78 !s120 ^Ke4:z?lHI<BjDRMRV20S3
 !i122 43
 L0 27 0
 R6
@@ -612,9 +616,9 @@ I[BLXZUD_>c:;KXcAMFJ;I0
 S1
 R1
 R59
+R76
 R77
 R78
-R79
 !i122 43
 L0 24 0
 R6
@@ -646,9 +650,9 @@ IJd]DFaHe;UdLc2glkhKg62
 S1
 R1
 R59
-Z80 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_monitor_bfm.sv
-Z81 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_monitor_bfm.sv
-Z82 !s120 ne9LLXbXFWUgZYj4Za5i@0
+Z79 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_monitor_bfm.sv
+Z80 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_monitor_bfm.sv
+Z81 !s120 ne9LLXbXFWUgZYj4Za5i@0
 R20
 R21
 R22
@@ -703,11 +707,11 @@ I;FbokIVgH2l]SC5j5coTS1
 S1
 R1
 R59
+R79
 R80
 R81
-R82
 !i122 43
-Z83 L0 31 0
+Z82 L0 31 0
 R6
 31
 R7
@@ -718,6 +722,7 @@ R10
 R11
 R12
 Xi2c_pkg
+!i114 1
 !i114 1
 !i114 1
 R2
@@ -785,7 +790,7 @@ F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verific
 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_agent.svh
 !s120 oWz^=R;RBzjTA38VBioHA1
 !i122 43
-R83
+R82
 VhJJ45L=D_lMA_dL9=j9^X3
 R6
 r1
@@ -802,7 +807,7 @@ Xi2c_pkg_hdl
 R2
 R3
 R4
-Z84 !s110 1773456340
+Z83 !s110 1773456340
 !i10b 1
 !s100 z9FG^3]S[UBdc4z7`bRZJ2
 I=O7BTA^08<Vc:aDGSD^j43
@@ -849,7 +854,7 @@ R64
 R65
 R62
 R63
-!i122 46
+!i122 47
 L0 2 177
 R6
 31
@@ -875,7 +880,7 @@ R72
 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/OTP_model.sv
 R60
 R61
-!i122 46
+!i122 47
 L0 6 29
 R48
 R6
@@ -894,8 +899,8 @@ Tqrun_opt
 !s11d i2c_pkg /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qrun.out/work 2 i2c_driver_bfm 1 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qrun.out/work i2c_monitor_bfm 1 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qrun.out/work 
 !s11d uvmf_base_pkg /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qrun.out/work 2 i2c_driver_bfm 1 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qrun.out/work i2c_monitor_bfm 1 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qrun.out/work 
 !s11d uvm_pkg /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/uvm-1.1d 2 i2c_monitor_bfm 1 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qrun.out/work i2c_driver_bfm 1 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/qrun.out/work 
-!s110 1774656313
-V67`E:;ZHAQg8]lNZMCJ;92
+!s110 1774663472
+VCP3X^k14<oBlcjPYXbYBG0
 04 7 4 work hdl_top fast 0
 04 7 4 work hvl_top fast 0
 R0
@@ -926,7 +931,7 @@ R72
 R54
 R55
 R56
-!i122 46
+!i122 47
 L0 22 169
 R6
 31
@@ -957,7 +962,7 @@ R66
 R67
 R55
 R56
-!i122 46
+!i122 47
 L0 7 109
 R6
 31
@@ -970,6 +975,7 @@ R11
 R12
 n@r@e@g_@m@a@p_@t@o@p
 Xreg_model_pkg
+!i114 1
 !i114 1
 !i114 1
 R2
@@ -1030,17 +1036,18 @@ R12
 Xuvmf_base_pkg
 !i114 1
 !i114 1
+!i114 1
 R2
 R3
 R13
 R4
-R84
+R83
 !i10b 1
 !s100 @4VWaalkYKKdOlIDDOBmo1
 IMOGT^oI;S7;D8jVI_X:P[0
 S1
 R1
-Z85 w1771785092
+Z84 w1771785092
 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg.sv
 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg.sv
 !s120 WmOM`k>OgN7X^dG3WY@??1
@@ -1139,7 +1146,7 @@ R3
 I6K8?z>B]gPBaKh>CP:U4d1
 S1
 R1
-R85
+R84
 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_hdl.sv
 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_hdl.sv
 !s120 BXDfI4WN];@a:lQgklYd[0
@@ -1178,55 +1185,55 @@ r1
 !s85 0
 31
 !s108 1774656274.000000
-R73
+!s107 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/I2C_Slave.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/Reg_Map.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/FSM.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/Reg_Map_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/otp_ctrl.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/watchDog.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/verilog/verilog_dut.v|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/digitop.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hvl_top.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/tests/digicore_tests_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/sequences/digicore_sequences_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/parameters/digicore_parameters_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/environment_packages/digitop_env_pkg/digitop_env_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/environment_packages/digitop_env_pkg/registers/reg_model_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_driver_bfm.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_monitor_bfm.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/src/i2c_if.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/i2c_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/i2c_pkg_hdl.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg.sv|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_hdl.sv|
 R9
 !i113 0
 R10
 R11
 R12
 Evhdl_dut
-Z86 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
-Z87 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
+Z85 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z86 DPx4 ieee 14 std_logic_1164 0 22 cVAk:aDinOX8^VGI1ekP<3
 32
-Z88 !s110 1773111922
+Z87 !s110 1773111922
 !i10b 1
 R45
 !i122 41
 R1
-Z89 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/vhdl/vhdl_dut.vhd
-Z90 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/vhdl/vhdl_dut.vhd
-Z91 !s120 ao7oFbP?_0>]QG_>96e;81
+Z88 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/vhdl/vhdl_dut.vhd
+Z89 F/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/vhdl/vhdl_dut.vhd
+Z90 !s120 ao7oFbP?_0>]QG_>96e;81
 l0
 L4 1
 VA_S[GzKXmjRZQ0EGY2>?B0
 !s100 YHiX09^FS?9c7;MH[92@@2
-Z92 OL;C;2024.2;79
-Z93 !s108 1773111920.000000
-Z94 !s90 -msglimit|error|-msglimitcount|20|-covermultiuserenv|-suppress|8887,2286|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/vhdl/vhdl_dut.vhd|-work|qrun.out/work|-autoorder|-statslog|qrun.out/stats_log|-writesessionid|+qrun.out/top_dus|-csession=incr|-csessionid=2|
-Z95 !s107 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/vhdl/vhdl_dut.vhd|
+Z91 OL;C;2024.2;79
+Z92 !s108 1773111920.000000
+Z93 !s90 -msglimit|error|-msglimitcount|20|-covermultiuserenv|-suppress|8887,2286|/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/vhdl/vhdl_dut.vhd|-work|qrun.out/work|-autoorder|-statslog|qrun.out/stats_log|-writesessionid|+qrun.out/top_dus|-csession=incr|-csessionid=2|
+Z94 !s107 /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/vhdl/vhdl_dut.vhd|
 !i113 0
-Z96 o-suppress 8887,2286 -msglimit error -msglimitcount 20 -work qrun.out/work
-Z97 tExplicit 1 CvgOpt 0
+Z95 o-suppress 8887,2286 -msglimit error -msglimitcount 20 -work qrun.out/work
+Z96 tExplicit 1 CvgOpt 0
 Artl
+R85
 R86
-R87
 DEx4 work 8 vhdl_dut 0 22 A_S[GzKXmjRZQ0EGY2>?B0
 32
-R88
+R87
 !i10b 1
 !i122 41
-R91
+R90
 l13
 L12 10
 VJ35NomzMcIKWHKNQ[N`eb0
 !s100 nDk6o6bR^bVi9TJk4M?0K2
+R91
 R92
 R93
 R94
-R95
 !i113 0
+R95
 R96
-R97
 vwatchDog
 R2
 R3
@@ -1242,10 +1249,10 @@ R49
 S1
 R1
 R72
-Z98 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/watchDog.sv
+Z97 8/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/watchDog.sv
 R62
 R63
-!i122 46
+!i122 47
 L0 38 30
 R6
 31
@@ -1272,10 +1279,10 @@ R49
 S1
 R1
 R72
-R98
+R97
 R62
 R63
-!i122 46
+!i122 47
 L0 144 37
 R6
 31
@@ -1302,10 +1309,10 @@ R49
 S1
 R1
 R72
-R98
+R97
 R62
 R63
-!i122 46
+!i122 47
 L0 69 74
 R6
 31

@@ -5,7 +5,7 @@
 
 # vsim -64 -onfinish stop -classdebug +uvm_set_config_int=*,enable_transaction_viewing,1 -permit_unmatched_virtual_intf -sv_seed 0 -msglimit error -msglimitcount 20 +UVM_TESTNAME=test_top -qwavedb=+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc+transaction +uvm_set_config_int=*,enable_transaction_viewing,1 -lib qrun.out/work -visualizer=design.bin -do {set IterationLimit 140000; set NoQuitOnFinish 1; coverage attribute -name TESTNAME -value test_top; coverage save -onexit test_top.ucdb;run 0; do /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/viswave.do} -statslog qrun.out/stats_log qrun_opt -suppress 8887,2286 -appendlog -l run.log
 # vsim -64 -onfinish stop -classdebug "+uvm_set_config_int=*,enable_transaction_viewing,1" -permit_unmatched_virtual_intf -sv_seed 0 -msglimit error -msglimitcount 20 "+UVM_TESTNAME=test_top" -qwavedb=+livesim+signal+memory=1024+report+parameter+class+assertion+uvm_schematic+msg+classmemory=1024+statictaskfunc+transaction "+uvm_set_config_int=*,enable_transaction_viewing,1" -lib qrun.out/work -visualizer=design.bin -statslog qrun.out/stats_log qrun_opt -suppress 8887,2286 -appendlog "+no_qwavedb_threading" 
-# Start time: 20:05:35 on Mar 27,2026
+# Start time: 22:04:50 on Mar 27,2026
 # Loading Siemens Visualizer shared object '/mnt/apps/public/COE/mg_apps/questa2024.2/questasim/bin/../linux_x86_64/VisualizerRls/bin/libqvisualizer.so'
 
 # Initiating qwavedb class logging
@@ -27,6 +27,7 @@
 # // and may not be used in any way not expressly authorized by SISW.
 # //
 # Loading sv_std.std
+# Loading work.digitop_sv_unit(fast)
 # Loading work.uvmf_base_pkg_hdl(fast)
 # Loading work.i2c_pkg_hdl(fast)
 # Loading work.i2c_if_sv_unit(fast)
@@ -35,7 +36,6 @@
 # Loading mtiUvm.uvm_pkg(fast)
 # Loading mtiUvm.questa_uvm_pkg(fast)
 # Loading work.digicore_parameters_pkg(fast)
-# Loading work.digitop_sv_unit(fast)
 # Loading work.hdl_top(fast)
 # Loading work.uvmf_base_pkg(fast)
 # Loading work.i2c_pkg(fast)
@@ -54,9 +54,9 @@
 # Loading work.vhdl_dut(rtl)#1
 # Loading /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
 
-# 20:05:40: Loading design data...
-# 20:05:40: Loaded  design units
-# 20:05:40: Loaded  design hierarchy
+# 22:04:53: Loading design data...
+# 22:04:53: Loaded  design units
+# 22:04:53: Loaded  design hierarchy
 # 	 Class Filter File used = /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/bin/../linux_x86_64/VisualizerRls/bin/../config/uvmclassfilter.txt
 # set IterationLimit 140000
 # 140000
@@ -153,36 +153,9 @@
 #    Time: 0 ps  Iteration: 7  Region: .uvm_pkg::uvm_phase::m_run_phases
 # Stopped at /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh line 292
 # Break in Function uvm_report_object::die at /mnt/apps/public/COE/mg_apps/questa2024.2/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_report_object.svh line 292
-# 20:05:51: Loading waveform header...
-# 20:05:51: Loaded  waveform header
+# 22:05:10: Loading waveform header...
+# 22:05:10: Loaded  waveform header
 
 # do /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/sim/viswave.do
 #   Error: Unable to wave uvm_test_top.environment.i2c_a.i2c_a_monitor.txn_stream.
 
-# Window layout 'Default' saved in file: /mnt/ncsudrive/m/mkoakley/.visualizer/layout.xml
-# Saving coverage database on exit...
-# Disable bg thread...
-# qwavedb_dumpvars : Simulation ending at [0 0] 0
-# ========= Visualizer Dump Summary report =========
-# 	 #Design Ids       = 2496
-# 	 #Class Ids        = 2225 (Recycled = 0)
-# 	 #Message Ids      = 10
-# 	 #Total Ids        = 2509
-# 	 #Swaps            = 5
-# 	  Id Memory        = 240.86 KB
-# 	  Swap Memory      = 50.00 MB
-# ========= End of Visualizer Dump Summary report =========
-# End time: 20:06:08 on Mar 27,2026, Elapsed time: 0:00:33
-# Errors: 0, Warnings: 0
-# Start  : Fri 27 Mar 2026 08:05:24 PM EDT
-# End    : Fri 27 Mar 2026 08:06:09 PM EDT
-# VMSize : 7140160 kB
-# VMPeak : 7152644 kB
-# MaxRSS : 316444 kB
-End time: 20:06:10 on Mar 27,2026, Elapsed time: 0:01:01
-*** Summary *********************************************
-    qrun: Errors:   0, Warnings:   0
-    vlog: Errors:   0, Warnings:   0
-    vopt: Errors:   0, Warnings:   2
-    vsim: Errors:   0, Warnings:   0
-  Totals: Errors:   0, Warnings:   2
