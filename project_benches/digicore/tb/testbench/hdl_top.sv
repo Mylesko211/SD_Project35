@@ -115,14 +115,14 @@ import uvmf_base_pkg_hdl::*;
                                  .CLK_GD_I(clk_gd_i),
                                  .PORZ(porz),
                                  .trim_done(trim_done),
-                                 .otp_do_i(otp_do_i),
-                                 .otp_cs_o(otp_cs_o),
-                                 .otp_prog_o(otp_prog_o),
-                                 .otp_read_o(otp_read_o),
-                                 .otp_en_prog_vpp_o(otp_en_prog_vpp_o),
-                                 .otp_en_read_vpp_o(otp_en_read_vpp_o),
-                                 .otp_adr_o(otp_adr_o),
-                                 .otp_din_o(otp_din_o),
+                                 //.otp_do_i(otp_do_i),
+                                 //.otp_cs_o(otp_cs_o),
+                                 //.otp_prog_o(otp_prog_o),
+                                 //.otp_read_o(otp_read_o),
+                                 //.otp_en_prog_vpp_o(otp_en_prog_vpp_o),
+                                 //.otp_en_read_vpp_o(otp_en_read_vpp_o),
+                                 //.otp_adr_o(otp_adr_o),
+                                 //.otp_din_o(otp_din_o),
                                  .i2c_scl(i2c_a_bus.scl),
                                  .i2c_sda(i2c_a_bus.sda)
                                  );
@@ -134,6 +134,7 @@ import uvmf_base_pkg_hdl::*;
     // They are placed into the uvm_config_db using the string names defined in the parameters package.
     // The string names are passed to the agent configurations by test_top through the top level configuration.
     // They are retrieved by the agents configuration class for use by the agent.
+    #300us;
     uvm_config_db #( virtual i2c_monitor_bfm #(
         .I2C_ADDR_WIDTH(7),
         .I2C_DATA_WIDTH(8),

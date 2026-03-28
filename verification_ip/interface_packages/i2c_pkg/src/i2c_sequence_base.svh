@@ -87,7 +87,6 @@ class i2c_sequence_base #(
   // have configured the interface driver to utilize the response transaction path by setting
   // the configuration variable "return_transaction_response" to 1. Otherwise it is possible
   // to impact runtime performance and memory utilization.
-  //.
   //
   virtual task pre_body();
     // pragma uvmf custom pre_body begin
@@ -101,18 +100,12 @@ class i2c_sequence_base #(
   // a req sequence item to the sequencer identified as an argument in the call
   // to start.
   //
-
-// Starts Myles Edits: 
-
   virtual task body();
     // pragma uvmf custom body begin
   	start_item(req);
-
   	finish_item(req);
     // pragma uvmf custom body end
   endtask
-
-  // Ends Myles Edits
 
   // ****************************************************************************
   // FUNCTION : new()

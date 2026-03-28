@@ -156,35 +156,84 @@ end
 
   // ****************************************************************************  
   task do_monitor();
-    //
-    // Available struct members:
-    //     //    monitored_trans.addr
-    //     //    monitored_trans.data
-    //     //    monitored_trans.op
-    //     //
-    // Reference code;
-    //    How to wait for signal value
-    //      while (control_signal === 1'b1) @(posedge scl_i);
-    //    
-    //    How to assign a transaction variable, named xyz, from a signal.   
-    //    All available input signals listed.
-    //      monitored_trans.xyz = sda_i;  //     
-    // pragma uvmf custom do_monitor begin
-    // UVMF_CHANGE_ME : Implement protocol monitoring.  The commented reference code 
-    // below are examples of how to capture signal values and assign them to 
-    // structure members.  All available input signals are listed.  The 'while' 
-    // code example shows how to wait for a synchronous flow control signal.  This
-    // task should return when a complete transfer has been observed.  Once this task is
-    // exited with captured values, it is then called again to wait for and observe 
-    // the next transfer. One clock cycle is consumed between calls to do_monitor.
+
+    bit [7:0] addr_byte;
+    bit [7:0] data_byte;
+    bit ack;
+    int i;
+
     monitored_trans.start_time = $time;
+    monitored_trans.data.delete();
+
+    // -------------------------------------------------
+    // Wait for START condition
+    // SDA: 1 -> 0 while SCL = 1
+    // -------------------------------------------------
+    wait (scl_i == 1 && sda_i == 1);
+    @(negedge sda_i);
+    if (scl_i != 1) begin
+      // Not a START, restart monitoring
+      return;
+    end
+
+    // -------------------------------------------------
+    // Capture address + R/W bit
+    // -------------------------------------------------
+    addr_byte = 0;
+
+    for (i = 7; i >= 0; i--) begin
+      @(posedge scl_i);
+      addr_byte[i] = sda_i;
+    end
+
+    monitored_trans.addr = addr_byte[7:1];
+
+    if (addr_byte[0])
+      monitored_trans.op = I2C_RD;
+    else
+      monitored_trans.op = I2C_WR;
+
+    // -------------------------------------------------
+    // ACK bit
+    // -------------------------------------------------
     @(posedge scl_i);
-    @(posedge scl_i);
-    @(posedge scl_i);
-    @(posedge scl_i);
+    ack = sda_i;
+
+    // -------------------------------------------------
+    // Capture data bytes until STOP
+    // -------------------------------------------------
+    forever begin
+
+      data_byte = 0;
+
+      // Read 8 bits
+      for (i = 7; i >= 0; i--) begin
+        @(posedge scl_i);
+        data_byte[i] = sda_i;
+      end
+
+      monitored_trans.data.push_back(data_byte);
+
+      // ACK/NACK bit
+      @(posedge scl_i);
+      ack = sda_i;
+
+      // -------------------------------------------------
+      // Check for STOP condition
+      // SDA: 0 -> 1 while SCL = 1
+      // -------------------------------------------------
+      if (scl_i == 1) begin
+        @(posedge sda_i);
+        if (scl_i == 1) begin
+          break;
+        end
+      end
+
+    end
+
     monitored_trans.end_time = $time;
-    // pragma uvmf custom do_monitor end
-  endtask         
+
+  endtask       
   
  
 endinterface

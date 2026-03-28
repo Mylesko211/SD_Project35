@@ -110,9 +110,9 @@
   /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hvl_top.sv
 
 // From /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/dut.compile
+  /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/digitop.sv
   /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/vhdl/vhdl_dut.vhd
   /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/verilog/verilog_dut.v
-  /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/rtl/sv/digitop.sv
 
 // From /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.compile
   /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hdl_top.sv

@@ -1,5 +1,6 @@
 `timescale 1ns / 1ps
 //////////////////////////////////////////////////////////////////////////////////
+`include "OTP_model.sv"
 `include "watchDog.sv"
 `include "otp_ctrl.sv"
 `include "Reg_Map_top.sv"
@@ -19,20 +20,30 @@ module digitop (
     // Trim control interface
     output logic        trim_done,     
 
-    // OTP 
-    input  logic [7:0]  otp_do_i,          
-    output logic        otp_cs_o,
-    output logic        otp_prog_o,
-    output logic        otp_read_o,
-    output logic        otp_en_prog_vpp_o,
-    output logic        otp_en_read_vpp_o,
-    output logic [3:0]  otp_adr_o,
-    output logic [7:0]  otp_din_o,
+    // OTP interface
+    //input  logic [7:0]  otp_do_i,          
+    //output logic        otp_cs_o,
+    //output logic        otp_prog_o,
+    //output logic        otp_read_o,
+    //output logic        otp_en_prog_vpp_o,
+    //output logic        otp_en_read_vpp_o,
+    //output logic [3:0]  otp_adr_o,
+    //output logic [7:0]  otp_din_o,
 	
 	// I2C
 	input logic			i2c_scl,
 	inout logic			i2c_sda
 );
+
+    // OTP interface
+    logic [7:0]  otp_do_i;          
+    logic        otp_cs_o;
+    logic        otp_prog_o;
+    logic        otp_read_o;
+    logic        otp_en_prog_vpp_o;
+    logic        otp_en_read_vpp_o;
+    logic [3:0]  otp_adr_o;
+    logic [7:0]  otp_din_o;
    
     // Reg-map -> OTP controller command bus
     logic        cmd_valid;
@@ -148,6 +159,19 @@ module digitop (
         .otp_en_read_vpp_o  (otp_en_read_vpp_o),
         .otp_adr_o          (otp_adr_o),
         .otp_din_o          (otp_din_o)
+    );
+
+    // otp model instance
+    otp_model otp_model_inst (
+        .otp_cs_i           (otp_cs_o),
+        .otp_prog_i         (otp_prog_o),
+        .otp_read_i         (otp_read_o),
+        .otp_en_prog_vpp_i  (otp_en_prog_vpp_o),
+        .otp_en_read_vpp_i  (otp_en_read_vpp_o),
+        .otp_adr_i          (otp_adr_o),
+        .otp_din_i          (otp_din_o),
+
+        .otp_do_o           (otp_do_i)
     );
 
     

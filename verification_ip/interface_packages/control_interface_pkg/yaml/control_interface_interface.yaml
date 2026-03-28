@@ -1,0 +1,41 @@
+uvmf:
+  interfaces:
+    control_interface:
+      clock: clk
+      config_constraints: []
+      config_vars: []
+      existing_library_component: 'True'
+      gen_inbound_streaming_driver: 'False'
+      hdl_pkg_parameters: []
+      hdl_typedefs: []
+      hvl_pkg_parameters: []
+      hvl_typedefs: []
+      parameters:
+      - name: DVDD_STARTUP_TIME
+        type: time
+        value: 23us
+      - name: PORZ_STARTUP_TIME
+        type: time
+        value: 120us
+      - name: CLK_GD_I_STARTUP_TIME
+        type: time
+        value: 100us
+      ports:
+      - dir: output
+        name: dvdd
+        reset_value: '''b0'
+        width: '1'
+      - dir: output
+        name: porz
+        reset_value: '''b0'
+        width: '1'
+      - dir: output
+        name: clk_gd_i
+        reset_value: '''b0'
+        width: '1'
+      reset: reset_n
+      reset_assertion_level: 'False'
+      transaction_constraints: []
+      transaction_vars: []
+      use_dpi_link: 'False'
+      veloce_ready: 'False'

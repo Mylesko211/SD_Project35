@@ -22,8 +22,7 @@ typedef digitop_environment digitop_environment_t;
 
 class test_top extends uvmf_test_base #(.CONFIG_T(digitop_env_configuration_t), 
                                         .ENV_T(digitop_environment_t), 
-                                        .TOP_LEVEL_SEQ_T(digicore_bench_sequence_base) 
-                                        );
+                                        .TOP_LEVEL_SEQ_T(digicore_bench_sequence_base));
 
   `uvm_component_utils( test_top );
 

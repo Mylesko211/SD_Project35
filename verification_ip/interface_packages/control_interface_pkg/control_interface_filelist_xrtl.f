@@ -1,0 +1,3 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/control_interface_pkg/src/control_interface_if.sv
+$UVMF_VIP_LIBRARY_HOME/interface_packages/control_interface_pkg/src/control_interface_monitor_bfm.sv
+$UVMF_VIP_LIBRARY_HOME/interface_packages/control_interface_pkg/src/control_interface_driver_bfm.sv

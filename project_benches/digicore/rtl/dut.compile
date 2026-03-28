@@ -3,9 +3,9 @@ src:
 # pragma uvmf custom src_additional begin
 # pragma uvmf custom src_additional end
 # pragma uvmf custom dut_compile_info begin
+  - ./sv/digitop.sv
   - ./vhdl/vhdl_dut.vhd
   - ./verilog/verilog_dut.v
-  - ./sv/digitop.sv
 # pragma uvmf custom dut_compile_info end
 
 # pragma uvmf custom compile_additional begin

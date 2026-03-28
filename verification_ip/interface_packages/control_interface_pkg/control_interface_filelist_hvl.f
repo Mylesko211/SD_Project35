@@ -1,0 +1,1 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/control_interface_pkg/control_interface_pkg.sv

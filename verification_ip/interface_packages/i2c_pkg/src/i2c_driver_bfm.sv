@@ -1,7 +1,6 @@
 //----------------------------------------------------------------------
 // Created with uvmf_gen version 2023.4_2
 //----------------------------------------------------------------------
-`timescale 1ns / 1ps
 // pragma uvmf custom header begin
 // pragma uvmf custom header end
 //----------------------------------------------------------------------
@@ -54,12 +53,9 @@
 //----------------------------------------------------------------------
 //----------------------------------------------------------------------
 //
-
-// Force recompile
 import uvmf_base_pkg_hdl::*;
 import i2c_pkg_hdl::*;
 import i2c_pkg::*;
-
 
 interface i2c_driver_bfm #(
   int I2C_ADDR_WIDTH = 7,
@@ -88,40 +84,7 @@ end
   uvmf_initiator_responder_t initiator_responder;
   // Custom configuration variables.  
   // These are set using the configure function which is called during the UVM connect_phase
-typedef enum bit[7:0] {
-    GEN_REG0   = 8'h00, 
-    GEN_REG1   = 8'h01,
-    GEN_REG2   = 8'h02,
-    GEN_REG3   = 8'h03,
-    GEN_REG4   = 8'h04,
-    GEN_REG5   = 8'h05,
-    GEN_REG6   = 8'h06,
-    GEN_REG7   = 8'h07,
-    WD_CTRL_REG= 8'h08,
-    OTP_CMD_REG= 8'h09,
-    OTP_ADDR_REG=8'h0A,
-    OTP_STATUS_REG=8'h0B,
-    INT_CTRL_REG=8'h0C,
-    // h'0E-h1F reserved
-    TRIM_REG0  = 8'h20,
-    TRIM_REG1  = 8'h21,
-    TRIM_REG2  = 8'h22,
-    TRIM_REG3  = 8'h23,
-    TRIM_REG4  = 8'h24,
-    TRIM_REG5  = 8'h25,
-    TRIM_REG6  = 8'h26,
-    TRIM_REG7  = 8'h27,
-    TRIM_REG8  = 8'h28,
-    TRIM_REG9  = 8'h29,
-    TRIM_REGA  = 8'h2A,
-    TRIM_REGB  = 8'h2B,
-    TRIM_REGC  = 8'h2C,
-    TRIM_REGD  = 8'h2D,
-    TRIM_REGE  = 8'h2E,
-    TRIM_REGF  = 8'h2F,
-    SYS_CTRL_REG=8'h30,
-    I2C_READ_ADDR = 8'h31,
-    TEST_REG = 8'h32} reg_addresses;
+
   tri scl_i;
   tri reset_n_i;
 
@@ -135,7 +98,7 @@ typedef enum bit[7:0] {
 
   // Bi-directional signals
   tri  sda_i;
-  reg  sda_o = 'b0;
+  reg  sda_o = 'bz;
   
 
   assign scl_i = bus.scl;
@@ -167,7 +130,7 @@ typedef enum bit[7:0] {
        // RESPONDER mode output signals
        // INITIATOR mode output signals
        // Bi-directional signals
-       sda_o <= 'b0;
+       sda_o <= 'bz;
  
      end    
 // pragma uvmf custom reset_condition_and_response end
@@ -203,60 +166,105 @@ typedef enum bit[7:0] {
 // UVMF_CHANGE_ME
 // This task is used by an initator.  The task first initiates a transfer then
 // waits for the responder to complete the transfer.
-    task initiate_and_get_response( i2c_transaction 
-                                  #(
-                                  I2C_ADDR_WIDTH,
-                                  I2C_DATA_WIDTH,
-                                  I2C_SLAVE_ADDRESS
-                                  )
+  task initiate_and_get_response(
+    i2c_transaction #(
+      I2C_ADDR_WIDTH,
+      I2C_DATA_WIDTH,
+      I2C_SLAVE_ADDRESS
+    ) initiator_trans
+  );
 
-                                  initiator_trans  
-                                  );
+  bit [7:0] addr_byte;
+  bit ack;
+  int i,j;
 
-       // 
-       // Variables within the initiator_trans:
-       //   bit [I2C_ADDR_WIDTH-1:0] addr ;
-       //   bit [I2C_DATA_WIDTH-1:0] data [];
-       //   i2c_op_t op ;
-       //
-       // Reference code;
-       //    How to wait for signal value
-       //      while (control_signal == 1'b1) @(posedge scl_i);
-       //    
-       //    How to assign a initiator_trans variable, named xyz, from a signal.   
-       //    All available initiator input and inout signals listed.
-       //    Initiator input signals:
-       //    Initiator inout signals:
-       //      initiator_trans.xyz = sda_i;  //     
-       //    How to assign a signal, named xyz, from a initiator_trans varaiable.   
-       //    All available initiator output and inout signals listed.
-       //    Notice the _o.  Those are storage variables that allow for procedural assignment.
-       //    Initiator output signals:
-       //    Initiator inout signals:
-       //      sda_o <= initiator_trans.xyz;  //     
-    // Initiate a transfer using the data received.
-    //@(posedge scl_i);
-    //@(posedge scl_i);
-    // Wait for the responder to complete the transfer then place the responder data into 
-    // initiator_trans.
-    //@(posedge scl_i);
-    //@(posedge scl_i);
+  // -------------------------------------------------
+  // Build address byte {addr, rw}
+  // -------------------------------------------------
+  addr_byte = {initiator_trans.addr, (initiator_trans.op == I2C_RD)};
 
+  // -------------------------------------------------
+  // START condition
+  // SDA: 1 -> 0 while SCL = 1
+  // -------------------------------------------------
+  @(posedge scl_i);
+  sda_o <= 1;
+  @(posedge scl_i);
+  sda_o <= 0;
 
-  /////////////////////////////////////////////////////
-  // Myles Edits
-  ////////////////////////////////////////////////////
-  logic [7:0] response_data;
-  #300us;
-  read_indirect(.i2c_slave_addr(I2C_SLAVE_ADDRESS), .read_addr(I2C_READ_ADDR), .target_reg(GEN_REG0), .data_byte(response_data));
-  read_indirect(.i2c_slave_addr(I2C_SLAVE_ADDRESS), .read_addr(I2C_READ_ADDR), .target_reg(GEN_REG1), .data_byte(response_data));
-  read_indirect(.i2c_slave_addr(I2C_SLAVE_ADDRESS), .read_addr(I2C_READ_ADDR), .target_reg(GEN_REG2), .data_byte(response_data));
-  read_indirect(.i2c_slave_addr(I2C_SLAVE_ADDRESS), .read_addr(I2C_READ_ADDR), .target_reg(GEN_REG3), .data_byte(response_data));
-  read_indirect(.i2c_slave_addr(I2C_SLAVE_ADDRESS), .read_addr(I2C_READ_ADDR), .target_reg(GEN_REG4), .data_byte(response_data));
-  read_indirect(.i2c_slave_addr(I2C_SLAVE_ADDRESS), .read_addr(I2C_READ_ADDR), .target_reg(GEN_REG5), .data_byte(response_data));
-  read_indirect(.i2c_slave_addr(I2C_SLAVE_ADDRESS), .read_addr(I2C_READ_ADDR), .target_reg(GEN_REG6), .data_byte(response_data));
-  read_indirect(.i2c_slave_addr(I2C_SLAVE_ADDRESS), .read_addr(I2C_READ_ADDR), .target_reg(GEN_REG7), .data_byte(response_data));
-  endtask        
+  // -------------------------------------------------
+  // Send address + R/W
+  // -------------------------------------------------
+  for (i = 7; i >= 0; i--) begin
+    @(negedge scl_i);
+    sda_o <= addr_byte[i];
+    @(posedge scl_i);
+  end
+
+  // -------------------------------------------------
+  // ACK bit from slave
+  // -------------------------------------------------
+  @(negedge scl_i);
+  sda_o <= 'bz; // release line
+  @(posedge scl_i);
+  ack = sda_i;
+
+  // -------------------------------------------------
+  // WRITE operation
+  // -------------------------------------------------
+  if (initiator_trans.op == I2C_WR) begin
+
+    foreach (initiator_trans.data[j]) begin
+
+      for (i = 7; i >= 0; i--) begin
+        @(negedge scl_i);
+        sda_o <= initiator_trans.data[j][i];
+        @(posedge scl_i);
+      end
+
+      // ACK from slave
+      @(negedge scl_i);
+      sda_o <= 'bz;
+      @(posedge scl_i);
+      ack = sda_i;
+
+    end
+  end
+
+  // -------------------------------------------------
+  // READ operation
+  // -------------------------------------------------
+  else begin
+
+    foreach (initiator_trans.data[j]) begin
+
+      initiator_trans.data[j] = 0;
+
+      for (i = 7; i >= 0; i--) begin
+        @(posedge scl_i);
+        initiator_trans.data[j][i] = sda_i;
+      end
+
+      // Master ACK
+      @(negedge scl_i);
+      sda_o <= 0;
+      @(posedge scl_i);
+
+    end
+  end
+
+  // -------------------------------------------------
+  // STOP condition
+  // SDA: 0 -> 1 while SCL = 1
+  // -------------------------------------------------
+  @(negedge scl_i);
+  sda_o <= 0;
+  @(posedge scl_i);
+  sda_o <= 1;
+  @(posedge scl_i);
+  sda_o <= 'bz;
+
+  endtask     
 // pragma uvmf custom initiate_and_get_response end
 
 // pragma uvmf custom respond_and_wait_for_next_transfer begin
@@ -314,129 +322,6 @@ bit first_transfer=1;
     @(posedge scl_i);
     first_transfer = 0;
   endtask
-//////////////////////////////////////////////////////////////////////////////////
-// Start of Myles Edits:
-//////////////////////////////////////////////////////////////////////////////////
-  
-  // TASKS and FUNCTIONS
- 
-  // I2C Master Tasks
-  task wait_scl_low();
-    while (scl_i !== 1'b0) #1;
-  endtask
-  
-  task wait_scl_high();
-    while (scl_i !== 1'b1) #1;
-  endtask
-  
-  task master_send_bit(input logic bitval);
-    begin
-      wait_scl_low();
-      sda_o = (bitval == 1'b0);
-      wait_scl_high();
-      wait_scl_low();
-    end
-  endtask
-  
-  task master_read_bit(output logic bitval);
-    begin
-      wait_scl_low();
-      sda_o = 1'b0;
-      wait_scl_high();
-      bitval = scl_i;
-      wait_scl_low();
-    end
-  endtask
-  
-  task i2c_start();
-    begin
-      sda_o = 1'b0;
-      wait_scl_high();
-      #1 sda_o = 1'b1;
-      #1 wait_scl_low();
-    end
-  endtask
-  
-  task i2c_stop();
-    begin
-      wait_scl_low();
-      sda_o = 1'b1;
-      wait_scl_high();
-      #1 sda_o = 1'b0;
-      #1;
-    end
-  endtask
-  
-  task master_send_byte (input [7:0] data_byte);
-    integer i;
-    for (i = I2C_DATA_WIDTH-1; i >= 0; i--) master_send_bit(data_byte[i]);
-  endtask
-  
-  task master_read_byte (output [7:0] data_byte);
-    integer i;
-    logic b;
-    begin
-      for (i = I2C_DATA_WIDTH-1; i >= 0; i--) begin
-        master_read_bit(b);
-        data_byte[i] = b;
-      end
-    end
-  endtask
-  
-  task master_read_ack(output logic ack_ok);
-    logic b;
-    begin
-      master_read_bit(b);
-      ack_ok = (b == 1'b0);
-    end
-  endtask
-  
-  task master_send_ack(input logic ack);
-    master_send_bit(ack ? 1'b0 : 1'b1);
-  endtask
-  
-  // Standard I2C write
-  task write(input [6:0] i2c_slave_addr = 7'h22, input [7:0] reg_addr, input [7:0] data_byte);
-    logic ack;
-    begin
-      i2c_start();
-      master_send_byte({i2c_slave_addr, 1'b0});
-      master_read_ack(ack);
-      master_send_byte(reg_addr);
-      master_read_ack(ack);
-      master_send_byte(data_byte);
-      master_read_ack(ack);
-      i2c_stop();
-    end
-  endtask
-  
-  // Indirect read: Write target address to I2C_READ_ADDR, then read from I2C_READ_ADDR
-  task read_indirect (input [6:0] i2c_slave_addr = 7'h22, input [7:0] read_addr, input [7:0] target_reg, output [7:0] data_byte);
-
-    logic ack;
-    begin
-      // Step 1: Write the target register address to I2C_READ_ADDR
-      i2c_start();
-      master_send_byte({i2c_slave_addr, 1'b0});  // Write operation
-      master_read_ack(ack);
-      master_send_byte(read_addr); // Point to I2C_READ_ADDR register
-      master_read_ack(ack);
-      master_send_byte(target_reg);    // Write target address
-      master_read_ack(ack);
-      i2c_stop();
-      
-      i2c_start();                     // Repeated start
-      master_send_byte({i2c_slave_addr, 1'b1});  // Read operation
-      master_read_ack(ack);
-      master_read_byte(data_byte);     // Read the data
-      master_send_ack(1'b0);           // NACK to end read
-      i2c_stop();
-    end
-  endtask
-//////////////////////////////////////////////////////////////////////////////////
-// End of Myles Edits
-//////////////////////////////////////////////////////////////////////////////////
-
 // pragma uvmf custom respond_and_wait_for_next_transfer end
 
  

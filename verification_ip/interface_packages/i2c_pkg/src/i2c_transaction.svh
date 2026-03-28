@@ -29,10 +29,27 @@ class i2c_transaction #(
 )
 
   rand bit [I2C_ADDR_WIDTH-1:0] addr ;
-  rand bit [I2C_DATA_WIDTH-1:0] data [];
+  rand bit [I2C_DATA_WIDTH-1:0] data [$];
   rand i2c_op_t op ;
 
   //Constraints for the transaction variables:
+  
+  constraint slave_addr { addr == I2C_SLAVE_ADDRESS; }
+  constraint reg_addr {
+    if (op == I2C_WR) {
+      data.size() >= 1;
+      data[0] inside { [8'h00 : 8'h0C], [8'h20 : 8'h32] };
+    }
+  }
+  constraint test_reg {
+    if (op == I2C_WR && data.size() > 1 && data[0] == 8'h32) {
+      data[1] inside { [8'h00 : 8'h0C], [8'h20 : 8'h31] };
+    }
+  }
+  constraint data_size_c {
+    if (op == I2C_WR) data.size() == 2;
+    else data.size() == 1;
+  }
 
   // pragma uvmf custom class_item_additional begin
   // pragma uvmf custom class_item_additional end
@@ -53,7 +70,7 @@ class i2c_transaction #(
   virtual function string convert2string();
     // pragma uvmf custom convert2string begin
     // UVMF_CHANGE_ME : Customize format if desired.
-    return $sformatf("addr:0x%x data:%p op:0x%x ",addr,data,op);
+    return $sformatf("addr:0x%x data:%p op:%s", addr, data, op.name());
     // pragma uvmf custom convert2string end
   endfunction
 

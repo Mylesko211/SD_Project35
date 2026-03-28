@@ -1,9 +1,9 @@
 BEGIN 3:i2c_monitor_bfm:fast__1:work
-    monitored_trans :  3:i2c_monitor_bfm:fast__1:work
     proxy :  3:i2c_monitor_bfm:fast__1:work
+    monitored_trans :  3:i2c_monitor_bfm:fast__1:work
 END 
 BEGIN 3:i2c_if:fast__1:work
-    sda :  3:i2c_monitor_bfm:fast__1:work 1:hdl_top:fast:work 3:i2c_driver_bfm:fast__1:work
+    sda :  3:i2c_monitor_bfm:fast__1:work 3:i2c_driver_bfm:fast__1:work 1:hdl_top:fast:work
     reset_n :  3:i2c_monitor_bfm:fast__1:work 3:i2c_driver_bfm:fast__1:work
-    scl :  3:i2c_monitor_bfm:fast__1:work 1:hdl_top:fast:work 3:i2c_driver_bfm:fast__1:work
+    scl :  3:i2c_monitor_bfm:fast__1:work 3:i2c_driver_bfm:fast__1:work 1:hdl_top:fast:work
 END 
