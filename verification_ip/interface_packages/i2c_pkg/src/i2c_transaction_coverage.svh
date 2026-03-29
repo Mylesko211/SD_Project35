@@ -14,27 +14,6 @@
 //----------------------------------------------------------------------
 //----------------------------------------------------------------------
 //
-
-
-
-
-
-//----------------------------------------------------------------------
-// Created with uvmf_gen version 2023.4_2
-//----------------------------------------------------------------------
-// pragma uvmf custom header begin
-// pragma uvmf custom header end
-//----------------------------------------------------------------------
-//----------------------------------------------------------------------
-//     
-// DESCRIPTION: This class records i2c transaction information using
-//       a covergroup named i2c_transaction_cg.  An instance of this
-//       coverage component is instantiated in the uvmf_parameterized_agent
-//       if the has_coverage flag is set.
-//
-//----------------------------------------------------------------------
-//----------------------------------------------------------------------
-//
 class i2c_transaction_coverage #(
       int I2C_ADDR_WIDTH = 7,
       int I2C_DATA_WIDTH = 8,
@@ -86,7 +65,7 @@ class i2c_transaction_coverage #(
     // 3. Coverpoint for Operation
     op: coverpoint coverage_trans.op;
 
-    // 4. Coverpoint for Mode State 
+    // 4. Coverspoint for Mode State 
     mode: coverpoint is_test_mode {
       bins regular_mode = {0};
       bins test_mode    = {1};
@@ -95,13 +74,7 @@ class i2c_transaction_coverage #(
     // 5. 3-Way Cross Coverage 
     cr_op_addr_mode: cross op, addr, mode {
       
-      // FIX 2: Changed 'intersecting' to 'intersect'
-      ignore_bins regular_ro_writes = binsof(mode.regular_mode) && 
-                                      binsof(op) intersect {I2C_WR} && 
-                                      (binsof(addr.control_regs) || 
-                                       binsof(addr.reserved_regs) || 
-                                       binsof(addr.trim_regs) || 
-                                       binsof(addr.i2c_read_reg));
+      //ignore_bins regular_ro_writes;
     }
 
     cp_reg8_special_data: coverpoint coverage_trans.data iff (coverage_trans.addr == 8 && coverage_trans.op == I2C_WR) {
@@ -142,13 +115,12 @@ virtual function void write (T t);
     // pragma uvmf custom coverage begin
     coverage_trans = t;
 
-    // We must ensure the data array has at least 1 byte before checking index [0]
     if (coverage_trans.op == I2C_WR && coverage_trans.data.size() > 0) begin
       if (coverage_trans.addr == 50) begin // Test Register
         
         if (is_test_mode == 0) begin
-          // We are in Regular Mode, looking for 9-1-9
-          // Check the first byte of the data payload payload (index 0)
+          // Waiting for test sequence.
+
           if      (test_seq_step == 0 && coverage_trans.data[0] == 8'h09) test_seq_step = 1;
           else if (test_seq_step == 1 && coverage_trans.data[0] == 8'h01) test_seq_step = 2;
           else if (test_seq_step == 2 && coverage_trans.data[0] == 8'h09) begin
@@ -161,7 +133,7 @@ virtual function void write (T t);
           end
         end 
         else begin
-          // We are in Test Mode. Exit if any number EXCEPT 9 is written.
+          // in Test Mode.
           if (coverage_trans.data[0] != 8'h09) begin
             is_test_mode = 0;  
             `uvm_info("COV", "EXITED TEST MODE", UVM_LOW)
@@ -175,7 +147,6 @@ virtual function void write (T t);
       end
     end
 
-    // Finally, sample the coverage after the state is updated
     i2c_transaction_cg.sample();
     // pragma uvmf custom coverage end
   endfunction

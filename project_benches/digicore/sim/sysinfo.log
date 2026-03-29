@@ -9,10 +9,10 @@ GPU Info: N/A
 GPU RAM: N/A
 Starting RAM Info: 
               total        used        free      shared  buff/cache   available
-Mem:          503Gi        24Gi       442Gi        95Mi        35Gi       474Gi
+Mem:          503Gi        25Gi       441Gi        95Mi        35Gi       474Gi
 Swap:          63Gi          0B        63Gi
 
 Ending RAM Info: 
               total        used        free      shared  buff/cache   available
-Mem:          503Gi        24Gi       442Gi        95Mi        35Gi       475Gi
+Mem:          503Gi        25Gi       441Gi        95Mi        35Gi       474Gi
 Swap:          63Gi          0B        63Gi
