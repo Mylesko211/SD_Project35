@@ -2,14 +2,17 @@ CPU Arch: x86_64
 Product Name: Red Hat Enterprise Linux 8.10 (Ootpa)
 Kernel Type: linux
 Kernel Version: 4.18.0-553.111.1.el8_10.x86_64
-Host Name: grendel50.ece.ncsu.edu
+Host Name: grendel52.ece.ncsu.edu
 CPU Info: model name	: Intel(R) Xeon(R) Gold 6246R CPU @ 3.40GHz
 
 GPU Info: N/A
 GPU RAM: N/A
 Starting RAM Info: 
               total        used        free      shared  buff/cache   available
-Mem:          503Gi        25Gi       452Gi        93Mi        24Gi       474Gi
+Mem:          503Gi        24Gi       442Gi        95Mi        35Gi       474Gi
 Swap:          63Gi          0B        63Gi
 
 Ending RAM Info: 
+              total        used        free      shared  buff/cache   available
+Mem:          503Gi        24Gi       442Gi        95Mi        35Gi       475Gi
+Swap:          63Gi          0B        63Gi

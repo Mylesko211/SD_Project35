@@ -69,7 +69,7 @@
 
 // From /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg/i2c_common.compile
   +incdir+/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/verification_ip/interface_packages/i2c_pkg
-  +incdir+/mnt/apps/public/COE/mg_apps/questa2024.2/questasim/verilog_src/uvm-1.1d/src
+  +incdir+/mnt/apps/public/COE/mg_apps/questa2024.2/questasim//verilog_src/uvm-1.1d/src
 
 // From /mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench/hvl_top.compile
   +incdir+/mnt/ncsudrive/m/mkoakley/SD/UVMF_2023.4_2/digitop/uvmf_template_output/project_benches/digicore/tb/testbench
