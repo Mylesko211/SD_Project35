@@ -1,0 +1,1 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/i2c_pkg/i2c_pkg_hdl.sv

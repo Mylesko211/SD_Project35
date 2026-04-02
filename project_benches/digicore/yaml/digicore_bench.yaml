@@ -1,0 +1,24 @@
+uvmf:
+  benches:
+    digicore:
+      active_passive:
+      - bfm_name: i2c_a
+        value: ACTIVE
+      active_passive_default: ACTIVE
+      clock_half_period: 5ns
+      clock_phase_offset: 9ns
+      existing_library_component: 'True'
+      interface_params:
+      - bfm_name: i2c_a
+        value:
+        - name: I2C_ADDR_WIDTH
+          value: '7'
+        - name: I2C_DATA_WIDTH
+          value: '8'
+        - name: I2C_SLAVE_ADDRESS
+          value: 8'h22
+      reset_assertion_level: 'False'
+      reset_duration: 250ns
+      top_env: digitop
+      use_dpi_link: 'False'
+      veloce_ready: 'False'

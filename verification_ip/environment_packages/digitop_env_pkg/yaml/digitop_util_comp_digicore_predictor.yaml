@@ -1,0 +1,11 @@
+uvmf:
+  util_components:
+    digicore_predictor:
+      analysis_exports:
+      - name: i2c_in_ae
+        type: 'i2c_transaction #()'
+      analysis_ports:
+      - name: i2c_expected_ap
+        type: 'i2c_transaction #()'
+      existing_library_component: 'True'
+      type: predictor

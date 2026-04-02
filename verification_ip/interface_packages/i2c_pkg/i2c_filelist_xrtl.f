@@ -1,0 +1,3 @@
+$UVMF_VIP_LIBRARY_HOME/interface_packages/i2c_pkg/src/i2c_if.sv
+$UVMF_VIP_LIBRARY_HOME/interface_packages/i2c_pkg/src/i2c_monitor_bfm.sv
+$UVMF_VIP_LIBRARY_HOME/interface_packages/i2c_pkg/src/i2c_driver_bfm.sv
