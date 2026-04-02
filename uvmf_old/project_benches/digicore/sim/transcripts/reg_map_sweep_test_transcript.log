@@ -1,0 +1,796 @@
+test -e work || vlib work 
+echo "Compiling Digicore RTL"
+Compiling Digicore RTL
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/FSM.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/I2C_Slave.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/OTP_model.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map_top.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/otp_ctrl.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/reset_handler.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/watchDog.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:47 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/FSM.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/I2C_Slave.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/OTP_model.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map_top.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/otp_ctrl.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/reset_handler.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/watchDog.sv /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package FSM_sv_unit
+-- Compiling module FSM
+-- Compiling module i2c_follower_module
+-- Compiling module otp_model
+-- Compiling module REG_MAP
+-- Compiling module FSM
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map_top.sv(4)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/FSM.sv(42): (vlog-2275) Existing module 'FSM' at line 42 will be overwritten.
+-- Compiling module REG_MAP
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map_top.sv(5)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map.sv(22): (vlog-2275) Existing module 'REG_MAP' at line 22 will be overwritten.
+-- Compiling package Reg_Map_top_sv_unit
+-- Compiling module FSM
+-- Compiling module REG_MAP
+-- Compiling module REG_MAP_TOP
+-- Compiling module otp_ctrl
+-- Compiling module reset_handler
+-- Compiling package watchDog_sv_unit
+-- Compiling module watchDog
+-- Compiling module watchDog_datapath
+-- Compiling module watchDog_controller
+-- Compiling module otp_model
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv(3)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/OTP_model.sv(6): (vlog-2275) Existing module 'otp_model' at line 6 will be overwritten.
+-- Compiling module watchDog
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv(4)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/watchDog.sv(38): (vlog-2275) Existing module 'watchDog' at line 38 will be overwritten.
+-- Compiling module watchDog_datapath
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv(4)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/watchDog.sv(69): (vlog-2275) Existing module 'watchDog_datapath' at line 69 will be overwritten.
+-- Compiling module watchDog_controller
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv(4)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/watchDog.sv(144): (vlog-2275) Existing module 'watchDog_controller' at line 144 will be overwritten.
+-- Compiling module otp_ctrl
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv(5)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/otp_ctrl.sv(2): (vlog-2275) Existing module 'otp_ctrl' at line 2 will be overwritten.
+-- Compiling module FSM
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv(6)
+** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map_top.sv(4)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/FSM.sv(42): (vlog-2275) Existing module 'FSM' at line 42 will be overwritten.
+-- Compiling module REG_MAP
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv(6)
+** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map_top.sv(5)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map.sv(22): (vlog-2275) Existing module 'REG_MAP' at line 22 will be overwritten.
+-- Compiling module REG_MAP_TOP
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv(6)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/Reg_Map_top.sv(7): (vlog-2275) Existing module 'REG_MAP_TOP' at line 7 will be overwritten.
+-- Compiling module i2c_follower_module
+** Warning: ** while parsing file included at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/digitop.sv(7)
+** at /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../rtl/sv/I2C_Slave.sv(2): (vlog-2275) Existing module 'i2c_follower_module' at line 2 will be overwritten.
+-- Compiling package digitop_sv_unit
+-- Compiling module watchDog
+-- Compiling module watchDog_datapath
+-- Compiling module watchDog_controller
+-- Compiling module otp_ctrl
+-- Compiling module FSM
+-- Compiling module REG_MAP
+-- Compiling module REG_MAP_TOP
+-- Compiling module i2c_follower_module
+-- Compiling module digitop
+
+Top level modules:
+	otp_model
+	reset_handler
+	digitop
+End time: 16:56:48 on Apr 01,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 11
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE   +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/uvmf_base_pkg -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_filelist_hdl.f
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:48 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/uvmf_base_pkg" -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_filelist_hdl.f 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package uvmf_base_pkg_hdl
+
+Top level modules:
+	--none--
+End time: 16:56:48 on Apr 01,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE   +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/uvmf_base_pkg -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_filelist_hvl.f
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:48 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/uvmf_base_pkg" -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/uvmf_base_pkg/uvmf_base_pkg_filelist_hvl.f 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package uvmf_base_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package uvmf_base_pkg_hdl
+
+Top level modules:
+	--none--
+End time: 16:56:49 on Apr 01,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg/i2c_filelist_hdl.f 
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:49 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg" -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg/i2c_filelist_hdl.f 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package i2c_pkg_hdl
+-- Importing package uvmf_base_pkg_hdl
+
+Top level modules:
+	--none--
+End time: 16:56:49 on Apr 01,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg/i2c_filelist_hvl.f 
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:50 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg" -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg/i2c_filelist_hvl.f 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package i2c_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package uvmf_base_pkg_hdl
+-- Importing package uvmf_base_pkg
+-- Importing package i2c_pkg_hdl
+
+Top level modules:
+	--none--
+End time: 16:56:50 on Apr 01,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg/i2c_filelist_xrtl.f  
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:51 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg" -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/interface_packages/i2c_pkg/i2c_filelist_xrtl.f 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package i2c_if_sv_unit
+-- Importing package uvmf_base_pkg_hdl
+-- Importing package i2c_pkg_hdl
+-- Compiling interface i2c_if
+-- Compiling package i2c_monitor_bfm_sv_unit
+-- Importing package i2c_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package uvmf_base_pkg
+-- Compiling interface i2c_monitor_bfm
+-- Compiling package i2c_driver_bfm_sv_unit
+-- Compiling interface i2c_driver_bfm
+
+Top level modules:
+	--none--
+End time: 16:56:52 on Apr 01,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/environment_packages/digitop_env_pkg /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/environment_packages/digitop_env_pkg/digitop_env_pkg.sv
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:52 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/environment_packages/digitop_env_pkg" /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../../../verification_ip/environment_packages/digitop_env_pkg/digitop_env_pkg.sv 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package digitop_env_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package uvmf_base_pkg
+-- Importing package uvmf_base_pkg_hdl
+-- Importing package i2c_pkg
+-- Importing package i2c_pkg_hdl
+
+Top level modules:
+	--none--
+End time: 16:56:53 on Apr 01,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/parameters /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/parameters/digicore_parameters_pkg.sv
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:53 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/parameters" /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/parameters/digicore_parameters_pkg.sv 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package digicore_parameters_pkg
+-- Importing package uvmf_base_pkg_hdl
+
+Top level modules:
+	--none--
+End time: 16:56:53 on Apr 01,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/sequences /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/sequences/digicore_sequences_pkg.sv
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:53 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/sequences" /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/sequences/digicore_sequences_pkg.sv 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package digicore_sequences_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package uvmf_base_pkg
+-- Importing package uvmf_base_pkg_hdl
+-- Importing package i2c_pkg
+-- Importing package i2c_pkg_hdl
+-- Importing package digicore_parameters_pkg
+-- Importing package digitop_env_pkg
+
+Top level modules:
+	--none--
+End time: 16:56:54 on Apr 01,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/tests /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/tests/digicore_tests_pkg.sv
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:54 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/tests" /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/tests/digicore_tests_pkg.sv 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling package digicore_tests_pkg
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package uvmf_base_pkg
+-- Importing package uvmf_base_pkg_hdl
+-- Importing package digicore_parameters_pkg
+-- Importing package digitop_env_pkg
+-- Importing package i2c_pkg
+-- Importing package i2c_pkg_hdl
+-- Importing package digicore_sequences_pkg
+
+Top level modules:
+	--none--
+End time: 16:56:55 on Apr 01,2026, Elapsed time: 0:00:01
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  +incdir+/questa_mvc_src/sv +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/testbench -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/testbench/top_filelist_hvl.f
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:55 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/questa_mvc_src/sv" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/testbench" -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/testbench/top_filelist_hvl.f 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling module hvl_top
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package digicore_tests_pkg
+-- Importing package uvmf_base_pkg
+-- Importing package uvmf_base_pkg_hdl
+-- Importing package digicore_parameters_pkg
+-- Importing package digitop_env_pkg
+-- Importing package i2c_pkg
+-- Importing package i2c_pkg_hdl
+-- Importing package digicore_sequences_pkg
+
+Top level modules:
+	hvl_top
+End time: 16:56:55 on Apr 01,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv   +define+UVM_REPORT_DISABLE_FILE_LINE +define+UVM_REPORT_DISABLE_FILE_LINE  +incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/testbench -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/testbench/top_filelist_hdl.f
+QuestaSim-64 vlog 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:56 on Apr 01,2026
+vlog -sv -suppress 2223 -suppress 2286 -covermultiuserenv "+define+UVM_REPORT_DISABLE_FILE_LINE" "+define+UVM_REPORT_DISABLE_FILE_LINE" "+incdir+/mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/testbench" -F /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/../tb/testbench/top_filelist_hdl.f 
+** Note: (vlog-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+-- Compiling module hdl_top
+-- Importing package digicore_parameters_pkg
+-- Importing package uvmf_base_pkg_hdl
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+
+Top level modules:
+	hdl_top
+End time: 16:56:56 on Apr 01,2026, Elapsed time: 0:00:00
+Errors: 0, Warnings: 0
+vopt +cover=bsf+/hdl_top/dut_verilog.      hvl_top hdl_top    -o optimized_batch_top_tb
+QuestaSim-64 vopt 2026.1 Compiler 2026.01 Jan 25 2026
+Start time: 16:56:56 on Apr 01,2026
+vopt "+cover=bsf+/hdl_top/dut_verilog." hvl_top hdl_top -o optimized_batch_top_tb 
+** Note: (vopt-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+
+Top level modules:
+	hvl_top
+	hdl_top
+
+Analyzing design...
+-- Loading module hvl_top
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package digicore_tests_pkg
+-- Importing package uvmf_base_pkg
+-- Importing package uvmf_base_pkg_hdl
+-- Importing package digicore_parameters_pkg
+-- Importing package digitop_env_pkg
+-- Importing package i2c_pkg
+-- Importing package i2c_pkg_hdl
+-- Importing package digicore_sequences_pkg
+-- Loading module hdl_top
+-- Loading package mtiUvm.questa_uvm_pkg
+-- Loading interface i2c_if
+-- Loading interface i2c_monitor_bfm
+-- Loading interface i2c_driver_bfm
+-- Loading module digitop
+-- Loading module i2c_follower_module
+-- Loading module REG_MAP_TOP
+-- Loading module FSM
+-- Loading module REG_MAP
+-- Loading module watchDog
+-- Loading module watchDog_datapath
+-- Loading module watchDog_controller
+-- Loading module otp_ctrl
+-- Loading module otp_model
+Optimizing 32 design-units (inlining 10/15 module instances):
+-- Optimizing package uvmf_base_pkg_hdl(fast)
+-- Optimizing package digicore_parameters_pkg(fast)
+-- Optimizing package mtiUvm.questa_uvm_pkg(fast)
+-- Optimizing package i2c_pkg_hdl(fast)
+-- Optimizing package i2c_if_sv_unit(fast)
+-- Optimizing package uvmf_base_pkg(fast)
+-- Optimizing package i2c_monitor_bfm_sv_unit(fast)
+-- Optimizing package i2c_driver_bfm_sv_unit(fast)
+-- Optimizing package digitop_sv_unit(fast)
+-- Optimizing package digitop_env_pkg(fast)
+-- Optimizing package digicore_sequences_pkg(fast)
+-- Inlining module i2c_follower_module(fast)
+-- Inlining module FSM(fast)
+-- Inlining module REG_MAP(fast)
+-- Inlining module REG_MAP_TOP(fast)
+-- Inlining module watchDog_datapath(fast)
+-- Inlining module watchDog_controller(fast)
+-- Inlining module watchDog(fast)
+-- Inlining module otp_ctrl(fast)
+-- Optimizing module digitop(fast)
+** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
+** Note: (vopt-143) Recognized 1 FSM in module "otp_ctrl(fast)".
+-- Optimizing interface i2c_driver_bfm(fast__1)
+-- Optimizing interface i2c_monitor_bfm(fast__1)
+-- Inlining interface i2c_if(fast__1)
+-- Inlining module otp_model(fast)
+-- Optimizing module hdl_top(fast)
+-- Optimizing module hvl_top(fast)
+-- Optimizing interface i2c_driver_bfm(fast)
+-- Optimizing interface i2c_monitor_bfm(fast)
+-- Optimizing interface i2c_if(fast)
+-- Optimizing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)(fast)
+-- Optimizing package i2c_pkg(fast)
+-- Optimizing package digicore_tests_pkg(fast)
+Optimized design name is optimized_batch_top_tb
+End time: 16:57:03 on Apr 01,2026, Elapsed time: 0:00:07
+Errors: 0, Warnings: 0
+vopt +cover=bsf+/hdl_top/dut_verilog.   +acc    hvl_top hdl_top    -o optimized_debug_top_tb
+QuestaSim-64 vopt 2026.1 Compiler 2026.01 Jan 25 2026
+** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility. The +acc switch would be deprecated in a future release.
+Start time: 16:57:03 on Apr 01,2026
+vopt "+cover=bsf+/hdl_top/dut_verilog." "+acc" hvl_top hdl_top -o optimized_debug_top_tb 
+** Note: (vopt-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+
+Top level modules:
+	hvl_top
+	hdl_top
+
+Analyzing design...
+-- Loading module hvl_top
+-- Importing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)
+-- Importing package digicore_tests_pkg
+-- Importing package uvmf_base_pkg
+-- Importing package uvmf_base_pkg_hdl
+-- Importing package digicore_parameters_pkg
+-- Importing package digitop_env_pkg
+-- Importing package i2c_pkg
+-- Importing package i2c_pkg_hdl
+-- Importing package digicore_sequences_pkg
+-- Loading module hdl_top
+-- Loading package mtiUvm.questa_uvm_pkg
+-- Loading interface i2c_if
+-- Loading interface i2c_monitor_bfm
+-- Loading interface i2c_driver_bfm
+-- Loading module digitop
+-- Loading module i2c_follower_module
+-- Loading module REG_MAP_TOP
+-- Loading module FSM
+-- Loading module REG_MAP
+-- Loading module watchDog
+-- Loading module watchDog_datapath
+-- Loading module watchDog_controller
+-- Loading module otp_ctrl
+-- Loading module otp_model
+Optimizing 32 design-units (inlining 0/15 module instances):
+-- Optimizing package uvmf_base_pkg_hdl(fast)
+-- Optimizing package digicore_parameters_pkg(fast)
+-- Optimizing package mtiUvm.questa_uvm_pkg(fast)
+-- Optimizing package i2c_pkg_hdl(fast)
+-- Optimizing package i2c_if_sv_unit(fast)
+-- Optimizing package uvmf_base_pkg(fast)
+-- Optimizing package i2c_pkg(fast)
+-- Optimizing package i2c_monitor_bfm_sv_unit(fast)
+-- Optimizing package i2c_driver_bfm_sv_unit(fast)
+-- Optimizing package digitop_sv_unit(fast)
+-- Optimizing package digitop_env_pkg(fast)
+-- Optimizing package digicore_sequences_pkg(fast)
+-- Optimizing package digicore_tests_pkg(fast)
+-- Optimizing module REG_MAP(fast)
+-- Optimizing module i2c_follower_module(fast)
+-- Optimizing interface i2c_driver_bfm(fast__1)
+-- Optimizing module otp_ctrl(fast)
+** Note: (vopt-143) Recognized 1 FSM in module "otp_ctrl(fast)".
+-- Optimizing interface i2c_monitor_bfm(fast__1)
+-- Optimizing module hdl_top(fast)
+-- Optimizing module FSM(fast)
+** Note: (vopt-143) Recognized 1 FSM in module "FSM(fast)".
+-- Optimizing module watchDog_datapath(fast)
+-- Optimizing module digitop(fast)
+-- Optimizing module REG_MAP_TOP(fast)
+-- Optimizing module watchDog_controller(fast)
+-- Optimizing module otp_model(fast)
+-- Optimizing module watchDog(fast)
+-- Optimizing interface i2c_if(fast__1)
+-- Optimizing module hvl_top(fast)
+-- Optimizing interface i2c_driver_bfm(fast)
+-- Optimizing interface i2c_monitor_bfm(fast)
+-- Optimizing interface i2c_if(fast)
+-- Optimizing package mtiUvm.uvm_pkg (uvm-1.1d Built-in)(fast)
+Optimized design name is optimized_debug_top_tb
+End time: 16:57:08 on Apr 01,2026, Elapsed time: 0:00:05
+Errors: 0, Warnings: 1
+vsim -c -coverage   -sv_seed 193456 +UVM_TESTNAME=reg_map_sweep_test  -permit_unmatched_virtual_intf +notimingchecks -suppress 8887 -solvefaildebug -solvefailtestcase    -uvmcontrol=none  -printsimstats     -do " coverage save -onexit reg_map_sweep_test.ucdb; set IterationLimit 140000; set NoQuitOnFinish 1;   run -all; quit -f;"  optimized_batch_top_tb  
+Reading pref.tcl
+
+# 2026.1
+
+# ** Note: (vsim-220) '/mnt/apps/public/COE/mg_apps/questa2026.1/questasim/modelsim.ini' is used as the ini file.
+# vsim -c -coverage -sv_seed 193456 "+UVM_TESTNAME=reg_map_sweep_test" -permit_unmatched_virtual_intf "+notimingchecks" -suppress 8887 -solvefaildebug -solvefailtestcase -uvmcontrol=none -printsimstats -do " coverage save -onexit reg_map_sweep_test.ucdb; set IterationLimit 140000; set NoQuitOnFinish 1;   run -all; quit -f;" optimized_batch_top_tb 
+# Start time: 16:57:11 on Apr 01,2026
+# //  Questa Sim-64
+# //  Version 2026.1 linux_x86_64 Jan 25 2026
+# //
+# // Unpublished work. Copyright 2026 Siemens
+# //
+# // This material contains trade secrets or otherwise confidential information
+# // owned by Siemens Industry Software Inc. or its affiliates (collectively,
+# // "SISW"), or its licensors. Access to and use of this information is strictly
+# // limited as set forth in the Customer's applicable agreements with SISW.
+# //
+# // This material may not be copied, distributed, or otherwise disclosed outside
+# // of the Customer's facilities without the express written permission of SISW,
+# // and may not be used in any way not expressly authorized by SISW.
+# //
+# Loading sv_std.std
+# Loading work.i2c_driver_bfm(fast)
+# Loading work.i2c_monitor_bfm(fast)
+# Loading work.uvmf_base_pkg_hdl(fast)
+# Loading work.i2c_pkg_hdl(fast)
+# Loading mtiUvm.uvm_pkg(fast)
+# Loading work.uvmf_base_pkg(fast)
+# Loading work.i2c_pkg(fast)
+# Loading work.digitop_env_pkg(fast)
+# Loading work.digicore_parameters_pkg(fast)
+# Loading work.digicore_sequences_pkg(fast)
+# Loading work.digicore_tests_pkg(fast)
+# Loading mtiUvm.questa_uvm_pkg(fast)
+# Loading work.hvl_top(fast)
+# Loading work.digitop_sv_unit(fast)
+# Loading work.i2c_if_sv_unit(fast)
+# Loading work.hdl_top(fast)
+# Loading work.i2c_monitor_bfm_sv_unit(fast)
+# Loading work.i2c_monitor_bfm(fast__1)
+# Loading work.i2c_driver_bfm_sv_unit(fast)
+# Loading work.i2c_driver_bfm(fast__1)
+# Loading work.digitop(fast)
+# Loading /mnt/apps/public/COE/mg_apps/questa2026.1/questasim/uvm-1.1d/linux_x86_64/uvm_dpi.so
+#  coverage save -onexit reg_map_sweep_test.ucdb
+#  set IterationLimit 140000
+# 140000
+#  set NoQuitOnFinish 1
+# 1
+#    run -all
+# ----------------------------------------------------------------
+# UVM-1.1d
+# (C) 2007-2013 Mentor Graphics Corporation
+# (C) 2007-2013 Cadence Design Systems, Inc.
+# (C) 2006-2013 Synopsys, Inc.
+# (C) 2011-2013 Cypress Semiconductor Corp.
+# ----------------------------------------------------------------
+# 
+#   ***********       IMPORTANT RELEASE NOTES         ************
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_NO_DEPRECATED undefined.
+#   See http://www.eda.org/svdb/view.php?id=3313 for more details.
+# 
+#   You are using a version of the UVM library that has been compiled
+#   with `UVM_OBJECT_MUST_HAVE_CONSTRUCTOR undefined.
+#   See http://www.eda.org/svdb/view.php?id=3770 for more details.
+# 
+#       (Specify +UVM_NO_RELNOTES to turn off this notice)
+# 
+# ----------------------------------------------------------------
+# //  UVM Framework 
+# //  Version 2023.4_2
+# //  (C) 2013-2024 Siemens Corporation
+# //  Digital Industries Software
+# //  Siemens EDA
+# //  All Rights Reserved.
+# ----------------------------------------------------------------
+# 
+# 
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(277) @ 0: reporter [Questa UVM] QUESTA_UVM-1.2.3
+# UVM_INFO verilog_src/questa_uvm_pkg-1.2/src/questa_uvm_pkg.sv(278) @ 0: reporter [Questa UVM]  questa_uvm::init()
+# UVM_INFO @ 0.000ns: reporter [RNTST] Running test reg_map_sweep_test...
+# UVM_INFO @ 260549.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x0 data:0x10
+# UVM_INFO @ 260859.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x0
+# UVM_INFO @ 261079.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x0
+# UVM_INFO @ 261079.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{16} op:I2C_RD reg_addr:0x0ACTUAL: addr:0x22 data:'{16} op:I2C_RD reg_addr:0x0
+# UVM_INFO @ 261389.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x0 data:0x80
+# UVM_INFO @ 261699.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x0
+# UVM_INFO @ 261919.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x0
+# UVM_INFO @ 261919.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{128} op:I2C_RD reg_addr:0x0ACTUAL: addr:0x22 data:'{128} op:I2C_RD reg_addr:0x0
+# UVM_INFO @ 262229.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x1 data:0x11
+# UVM_INFO @ 262539.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x1
+# UVM_INFO @ 262759.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x1
+# UVM_INFO @ 262759.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{17} op:I2C_RD reg_addr:0x1ACTUAL: addr:0x22 data:'{17} op:I2C_RD reg_addr:0x1
+# UVM_INFO @ 263069.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x1 data:0x81
+# UVM_INFO @ 263379.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x1
+# UVM_INFO @ 263599.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x1
+# UVM_INFO @ 263599.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{129} op:I2C_RD reg_addr:0x1ACTUAL: addr:0x22 data:'{129} op:I2C_RD reg_addr:0x1
+# UVM_INFO @ 263909.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2 data:0x12
+# UVM_INFO @ 264219.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2
+# UVM_INFO @ 264439.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2
+# UVM_INFO @ 264439.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{18} op:I2C_RD reg_addr:0x2ACTUAL: addr:0x22 data:'{18} op:I2C_RD reg_addr:0x2
+# UVM_INFO @ 264749.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2 data:0x82
+# UVM_INFO @ 265059.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2
+# UVM_INFO @ 265279.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2
+# UVM_INFO @ 265279.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{130} op:I2C_RD reg_addr:0x2ACTUAL: addr:0x22 data:'{130} op:I2C_RD reg_addr:0x2
+# UVM_INFO @ 265589.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x3 data:0x13
+# UVM_INFO @ 265899.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x3
+# UVM_INFO @ 266119.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x3
+# UVM_INFO @ 266119.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{19} op:I2C_RD reg_addr:0x3ACTUAL: addr:0x22 data:'{19} op:I2C_RD reg_addr:0x3
+# UVM_INFO @ 266429.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x3 data:0x83
+# UVM_INFO @ 266739.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x3
+# UVM_INFO @ 266959.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x3
+# UVM_INFO @ 266959.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{131} op:I2C_RD reg_addr:0x3ACTUAL: addr:0x22 data:'{131} op:I2C_RD reg_addr:0x3
+# UVM_INFO @ 267269.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x4 data:0x14
+# UVM_INFO @ 267579.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x4
+# UVM_INFO @ 267799.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x4
+# UVM_INFO @ 267799.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{20} op:I2C_RD reg_addr:0x4ACTUAL: addr:0x22 data:'{20} op:I2C_RD reg_addr:0x4
+# UVM_INFO @ 268109.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x4 data:0x84
+# UVM_INFO @ 268419.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x4
+# UVM_INFO @ 268639.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x4
+# UVM_INFO @ 268639.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{132} op:I2C_RD reg_addr:0x4ACTUAL: addr:0x22 data:'{132} op:I2C_RD reg_addr:0x4
+# UVM_INFO @ 268949.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x5 data:0x15
+# UVM_INFO @ 269259.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x5
+# UVM_INFO @ 269479.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x5
+# UVM_INFO @ 269479.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{21} op:I2C_RD reg_addr:0x5ACTUAL: addr:0x22 data:'{21} op:I2C_RD reg_addr:0x5
+# UVM_INFO @ 269789.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x5 data:0x85
+# UVM_INFO @ 270099.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x5
+# UVM_INFO @ 270319.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x5
+# UVM_INFO @ 270319.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{133} op:I2C_RD reg_addr:0x5ACTUAL: addr:0x22 data:'{133} op:I2C_RD reg_addr:0x5
+# UVM_INFO @ 270629.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x6 data:0x16
+# UVM_INFO @ 270939.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x6
+# UVM_INFO @ 271159.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x6
+# UVM_INFO @ 271159.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{22} op:I2C_RD reg_addr:0x6ACTUAL: addr:0x22 data:'{22} op:I2C_RD reg_addr:0x6
+# UVM_INFO @ 271469.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x6 data:0x86
+# UVM_INFO @ 271779.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x6
+# UVM_INFO @ 271999.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x6
+# UVM_INFO @ 271999.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{134} op:I2C_RD reg_addr:0x6ACTUAL: addr:0x22 data:'{134} op:I2C_RD reg_addr:0x6
+# UVM_INFO @ 272309.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x7 data:0x17
+# UVM_INFO @ 272619.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x7
+# UVM_INFO @ 272839.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x7
+# UVM_INFO @ 272839.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{23} op:I2C_RD reg_addr:0x7ACTUAL: addr:0x22 data:'{23} op:I2C_RD reg_addr:0x7
+# UVM_INFO @ 273149.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x7 data:0x87
+# UVM_INFO @ 273459.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x7
+# UVM_INFO @ 273679.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x7
+# UVM_INFO @ 273679.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{135} op:I2C_RD reg_addr:0x7ACTUAL: addr:0x22 data:'{135} op:I2C_RD reg_addr:0x7
+# UVM_INFO @ 273989.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x8 data:0x2a
+# UVM_INFO @ 274299.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x8
+# UVM_INFO @ 274519.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x8
+# UVM_INFO @ 274519.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{42} op:I2C_RD reg_addr:0x8ACTUAL: addr:0x22 data:'{42} op:I2C_RD reg_addr:0x8
+# UVM_INFO @ 274829.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x8 data:0x54
+# UVM_INFO @ 275139.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x8
+# UVM_INFO @ 275359.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x8
+# UVM_INFO @ 275359.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{84} op:I2C_RD reg_addr:0x8ACTUAL: addr:0x22 data:'{84} op:I2C_RD reg_addr:0x8
+# UVM_INFO @ 275669.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x9 data:0x0
+# UVM_INFO @ 275979.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x9
+# UVM_INFO @ 276199.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x9
+# UVM_INFO @ 276199.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{0} op:I2C_RD reg_addr:0x9ACTUAL: addr:0x22 data:'{0} op:I2C_RD reg_addr:0x9
+# UVM_INFO @ 276509.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x9 data:0x0
+# UVM_INFO @ 276819.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x9
+# UVM_INFO @ 277039.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x9
+# UVM_INFO @ 277039.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{0} op:I2C_RD reg_addr:0x9ACTUAL: addr:0x22 data:'{0} op:I2C_RD reg_addr:0x9
+# UVM_INFO @ 277349.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0xa data:0x3
+# UVM_INFO @ 277659.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0xa
+# UVM_INFO @ 277879.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0xa
+# UVM_INFO @ 277879.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{3} op:I2C_RD reg_addr:0xaACTUAL: addr:0x22 data:'{3} op:I2C_RD reg_addr:0xa
+# UVM_INFO @ 278189.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0xa data:0x55
+# UVM_INFO @ 278499.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0xa
+# UVM_INFO @ 278719.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0xa
+# UVM_INFO @ 278719.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{85} op:I2C_RD reg_addr:0xaACTUAL: addr:0x22 data:'{85} op:I2C_RD reg_addr:0xa
+# UVM_INFO @ 279029.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0xb data:0x20
+# UVM_INFO @ 279339.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0xb
+# UVM_INFO @ 279559.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0xb
+# UVM_INFO @ 279559.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{32} op:I2C_RD reg_addr:0xbACTUAL: addr:0x22 data:'{32} op:I2C_RD reg_addr:0xb
+# UVM_INFO @ 279869.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0xb data:0xe0
+# UVM_INFO @ 280179.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0xb
+# UVM_INFO @ 280399.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0xb
+# UVM_INFO @ 280399.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{224} op:I2C_RD reg_addr:0xbACTUAL: addr:0x22 data:'{224} op:I2C_RD reg_addr:0xb
+# UVM_INFO @ 280709.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0xc data:0x1
+# UVM_INFO @ 281019.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0xc
+# UVM_INFO @ 281239.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0xc
+# UVM_INFO @ 281239.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{1} op:I2C_RD reg_addr:0xcACTUAL: addr:0x22 data:'{1} op:I2C_RD reg_addr:0xc
+# UVM_INFO @ 281549.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0xc data:0x2
+# UVM_INFO @ 281859.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0xc
+# UVM_INFO @ 282079.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0xc
+# UVM_INFO @ 282079.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{2} op:I2C_RD reg_addr:0xcACTUAL: addr:0x22 data:'{2} op:I2C_RD reg_addr:0xc
+# UVM_INFO @ 282389.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x30 data:0x1
+# UVM_INFO @ 282699.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x30
+# UVM_INFO @ 282919.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x30
+# UVM_INFO @ 282919.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{1} op:I2C_RD reg_addr:0x30ACTUAL: addr:0x22 data:'{1} op:I2C_RD reg_addr:0x30
+# UVM_INFO @ 283229.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x30 data:0x7f
+# UVM_INFO @ 283539.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x30
+# UVM_INFO @ 283759.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x30
+# UVM_INFO @ 283759.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{127} op:I2C_RD reg_addr:0x30ACTUAL: addr:0x22 data:'{127} op:I2C_RD reg_addr:0x30
+# UVM_INFO @ 284069.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x31
+# UVM_INFO @ 284379.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x31
+# UVM_INFO @ 284599.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x31
+# UVM_INFO @ 284599.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{49} op:I2C_RD reg_addr:0x31ACTUAL: addr:0x22 data:'{49} op:I2C_RD reg_addr:0x31
+# UVM_INFO @ 284909.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x31
+# UVM_INFO @ 285219.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x31
+# UVM_INFO @ 285439.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x31
+# UVM_INFO @ 285439.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{49} op:I2C_RD reg_addr:0x31ACTUAL: addr:0x22 data:'{49} op:I2C_RD reg_addr:0x31
+# UVM_INFO @ 285749.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x32 data:0x9
+# UVM_INFO @ 286059.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x32
+# UVM_INFO @ 286279.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x32
+# UVM_INFO @ 286279.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{9} op:I2C_RD reg_addr:0x32ACTUAL: addr:0x22 data:'{9} op:I2C_RD reg_addr:0x32
+# UVM_INFO @ 286589.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x32 data:0x1
+# UVM_INFO @ 286899.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x32
+# UVM_INFO @ 287119.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x32
+# UVM_INFO @ 287119.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{1} op:I2C_RD reg_addr:0x32ACTUAL: addr:0x22 data:'{1} op:I2C_RD reg_addr:0x32
+# UVM_INFO @ 287429.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x32 data:0x9
+# UVM_INFO @ 287739.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x32
+# UVM_INFO @ 287959.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x32
+# UVM_INFO @ 287959.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{9} op:I2C_RD reg_addr:0x32ACTUAL: addr:0x22 data:'{9} op:I2C_RD reg_addr:0x32
+# UVM_INFO @ 288269.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x20 data:0x40
+# UVM_INFO @ 288579.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x20
+# UVM_INFO @ 288799.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x20
+# UVM_INFO @ 288799.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{64} op:I2C_RD reg_addr:0x20ACTUAL: addr:0x22 data:'{64} op:I2C_RD reg_addr:0x20
+# UVM_INFO @ 289109.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x20 data:0x60
+# UVM_INFO @ 289419.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x20
+# UVM_INFO @ 289639.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x20
+# UVM_INFO @ 289639.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{96} op:I2C_RD reg_addr:0x20ACTUAL: addr:0x22 data:'{96} op:I2C_RD reg_addr:0x20
+# UVM_INFO @ 289949.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x21 data:0x41
+# UVM_INFO @ 290259.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x21
+# UVM_INFO @ 290479.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x21
+# UVM_INFO @ 290479.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{65} op:I2C_RD reg_addr:0x21ACTUAL: addr:0x22 data:'{65} op:I2C_RD reg_addr:0x21
+# UVM_INFO @ 290789.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x21 data:0x61
+# UVM_INFO @ 291099.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x21
+# UVM_INFO @ 291319.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x21
+# UVM_INFO @ 291319.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{97} op:I2C_RD reg_addr:0x21ACTUAL: addr:0x22 data:'{97} op:I2C_RD reg_addr:0x21
+# UVM_INFO @ 291629.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x22 data:0x42
+# UVM_INFO @ 291939.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x22
+# UVM_INFO @ 292159.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x22
+# UVM_INFO @ 292159.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{66} op:I2C_RD reg_addr:0x22ACTUAL: addr:0x22 data:'{66} op:I2C_RD reg_addr:0x22
+# UVM_INFO @ 292469.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x22 data:0x62
+# UVM_INFO @ 292779.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x22
+# UVM_INFO @ 292999.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x22
+# UVM_INFO @ 292999.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{98} op:I2C_RD reg_addr:0x22ACTUAL: addr:0x22 data:'{98} op:I2C_RD reg_addr:0x22
+# UVM_INFO @ 293309.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x23 data:0x43
+# UVM_INFO @ 293619.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x23
+# UVM_INFO @ 293839.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x23
+# UVM_INFO @ 293839.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{67} op:I2C_RD reg_addr:0x23ACTUAL: addr:0x22 data:'{67} op:I2C_RD reg_addr:0x23
+# UVM_INFO @ 294149.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x23 data:0x63
+# UVM_INFO @ 294459.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x23
+# UVM_INFO @ 294679.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x23
+# UVM_INFO @ 294679.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{99} op:I2C_RD reg_addr:0x23ACTUAL: addr:0x22 data:'{99} op:I2C_RD reg_addr:0x23
+# UVM_INFO @ 294989.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x24 data:0x44
+# UVM_INFO @ 295299.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x24
+# UVM_INFO @ 295519.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x24
+# UVM_INFO @ 295519.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{68} op:I2C_RD reg_addr:0x24ACTUAL: addr:0x22 data:'{68} op:I2C_RD reg_addr:0x24
+# UVM_INFO @ 295829.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x24 data:0x64
+# UVM_INFO @ 296139.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x24
+# UVM_INFO @ 296359.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x24
+# UVM_INFO @ 296359.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{100} op:I2C_RD reg_addr:0x24ACTUAL: addr:0x22 data:'{100} op:I2C_RD reg_addr:0x24
+# UVM_INFO @ 296669.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x25 data:0x45
+# UVM_INFO @ 296979.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x25
+# UVM_INFO @ 297199.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x25
+# UVM_INFO @ 297199.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{69} op:I2C_RD reg_addr:0x25ACTUAL: addr:0x22 data:'{69} op:I2C_RD reg_addr:0x25
+# UVM_INFO @ 297509.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x25 data:0x65
+# UVM_INFO @ 297819.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x25
+# UVM_INFO @ 298039.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x25
+# UVM_INFO @ 298039.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{101} op:I2C_RD reg_addr:0x25ACTUAL: addr:0x22 data:'{101} op:I2C_RD reg_addr:0x25
+# UVM_INFO @ 298349.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x26 data:0x46
+# UVM_INFO @ 298659.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x26
+# UVM_INFO @ 298879.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x26
+# UVM_INFO @ 298879.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{70} op:I2C_RD reg_addr:0x26ACTUAL: addr:0x22 data:'{70} op:I2C_RD reg_addr:0x26
+# UVM_INFO @ 299189.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x26 data:0x66
+# UVM_INFO @ 299499.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x26
+# UVM_INFO @ 299719.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x26
+# UVM_INFO @ 299719.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{102} op:I2C_RD reg_addr:0x26ACTUAL: addr:0x22 data:'{102} op:I2C_RD reg_addr:0x26
+# UVM_INFO @ 300029.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x27 data:0x47
+# UVM_INFO @ 300339.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x27
+# UVM_INFO @ 300559.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x27
+# UVM_INFO @ 300559.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{71} op:I2C_RD reg_addr:0x27ACTUAL: addr:0x22 data:'{71} op:I2C_RD reg_addr:0x27
+# UVM_INFO @ 300869.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x27 data:0x67
+# UVM_INFO @ 301179.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x27
+# UVM_INFO @ 301399.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x27
+# UVM_INFO @ 301399.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{103} op:I2C_RD reg_addr:0x27ACTUAL: addr:0x22 data:'{103} op:I2C_RD reg_addr:0x27
+# UVM_INFO @ 301709.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x28 data:0x48
+# UVM_INFO @ 302019.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x28
+# UVM_INFO @ 302239.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x28
+# UVM_INFO @ 302239.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{72} op:I2C_RD reg_addr:0x28ACTUAL: addr:0x22 data:'{72} op:I2C_RD reg_addr:0x28
+# UVM_INFO @ 302549.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x28 data:0x68
+# UVM_INFO @ 302859.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x28
+# UVM_INFO @ 303079.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x28
+# UVM_INFO @ 303079.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{104} op:I2C_RD reg_addr:0x28ACTUAL: addr:0x22 data:'{104} op:I2C_RD reg_addr:0x28
+# UVM_INFO @ 303389.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x29 data:0x49
+# UVM_INFO @ 303699.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x29
+# UVM_INFO @ 303919.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x29
+# UVM_INFO @ 303919.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{73} op:I2C_RD reg_addr:0x29ACTUAL: addr:0x22 data:'{73} op:I2C_RD reg_addr:0x29
+# UVM_INFO @ 304229.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x29 data:0x69
+# UVM_INFO @ 304539.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x29
+# UVM_INFO @ 304759.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x29
+# UVM_INFO @ 304759.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{105} op:I2C_RD reg_addr:0x29ACTUAL: addr:0x22 data:'{105} op:I2C_RD reg_addr:0x29
+# UVM_INFO @ 305069.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2a data:0x4a
+# UVM_INFO @ 305379.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2a
+# UVM_INFO @ 305599.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2a
+# UVM_INFO @ 305599.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{74} op:I2C_RD reg_addr:0x2aACTUAL: addr:0x22 data:'{74} op:I2C_RD reg_addr:0x2a
+# UVM_INFO @ 305909.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2a data:0x6a
+# UVM_INFO @ 306219.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2a
+# UVM_INFO @ 306439.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2a
+# UVM_INFO @ 306439.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{106} op:I2C_RD reg_addr:0x2aACTUAL: addr:0x22 data:'{106} op:I2C_RD reg_addr:0x2a
+# UVM_INFO @ 306749.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2b data:0x4b
+# UVM_INFO @ 307059.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2b
+# UVM_INFO @ 307279.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2b
+# UVM_INFO @ 307279.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{75} op:I2C_RD reg_addr:0x2bACTUAL: addr:0x22 data:'{75} op:I2C_RD reg_addr:0x2b
+# UVM_INFO @ 307589.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2b data:0x6b
+# UVM_INFO @ 307899.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2b
+# UVM_INFO @ 308119.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2b
+# UVM_INFO @ 308119.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{107} op:I2C_RD reg_addr:0x2bACTUAL: addr:0x22 data:'{107} op:I2C_RD reg_addr:0x2b
+# UVM_INFO @ 308429.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2c data:0x4c
+# UVM_INFO @ 308739.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2c
+# UVM_INFO @ 308959.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2c
+# UVM_INFO @ 308959.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{76} op:I2C_RD reg_addr:0x2cACTUAL: addr:0x22 data:'{76} op:I2C_RD reg_addr:0x2c
+# UVM_INFO @ 309269.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2c data:0x6c
+# UVM_INFO @ 309579.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2c
+# UVM_INFO @ 309799.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2c
+# UVM_INFO @ 309799.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{108} op:I2C_RD reg_addr:0x2cACTUAL: addr:0x22 data:'{108} op:I2C_RD reg_addr:0x2c
+# UVM_INFO @ 310109.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2d data:0x4d
+# UVM_INFO @ 310419.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2d
+# UVM_INFO @ 310639.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2d
+# UVM_INFO @ 310639.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{77} op:I2C_RD reg_addr:0x2dACTUAL: addr:0x22 data:'{77} op:I2C_RD reg_addr:0x2d
+# UVM_INFO @ 310949.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2d data:0x6d
+# UVM_INFO @ 311259.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2d
+# UVM_INFO @ 311479.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2d
+# UVM_INFO @ 311479.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{109} op:I2C_RD reg_addr:0x2dACTUAL: addr:0x22 data:'{109} op:I2C_RD reg_addr:0x2d
+# UVM_INFO @ 311789.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2e data:0x4e
+# UVM_INFO @ 312099.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2e
+# UVM_INFO @ 312319.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2e
+# UVM_INFO @ 312319.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{78} op:I2C_RD reg_addr:0x2eACTUAL: addr:0x22 data:'{78} op:I2C_RD reg_addr:0x2e
+# UVM_INFO @ 312629.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2e data:0x6e
+# UVM_INFO @ 312939.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2e
+# UVM_INFO @ 313159.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2e
+# UVM_INFO @ 313159.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{110} op:I2C_RD reg_addr:0x2eACTUAL: addr:0x22 data:'{110} op:I2C_RD reg_addr:0x2e
+# UVM_INFO @ 313469.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2f data:0x4f
+# UVM_INFO @ 313779.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2f
+# UVM_INFO @ 313999.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2f
+# UVM_INFO @ 313999.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{79} op:I2C_RD reg_addr:0x2fACTUAL: addr:0x22 data:'{79} op:I2C_RD reg_addr:0x2f
+# UVM_INFO @ 314309.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x2f data:0x6f
+# UVM_INFO @ 314619.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x2f
+# UVM_INFO @ 314839.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x2f
+# UVM_INFO @ 314839.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{111} op:I2C_RD reg_addr:0x2fACTUAL: addr:0x22 data:'{111} op:I2C_RD reg_addr:0x2f
+# UVM_INFO @ 315149.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x32 data:0x9
+# UVM_INFO @ 315459.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x32
+# UVM_INFO @ 315679.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x32
+# UVM_INFO @ 315679.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{9} op:I2C_RD reg_addr:0x32ACTUAL: addr:0x22 data:'{9} op:I2C_RD reg_addr:0x32
+# UVM_INFO @ 315989.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x32 data:0x1
+# UVM_INFO @ 316299.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans WRITE reg:0x31 data:0x32
+# UVM_INFO @ 316519.000ns: uvm_test_top.environment.digicore_pred [PRED] monitored_trans READ  reg:0x32
+# UVM_INFO @ 316519.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] MATCH! - EXPECTED: addr:0x22 data:'{1} op:I2C_RD reg_addr:0x32ACTUAL: addr:0x22 data:'{1} op:I2C_RD reg_addr:0x32
+# UVM_INFO verilog_src/uvm-1.1d/src/base/uvm_objection.svh(1267) @ 336539.000ns: reporter [TEST_DONE] 'run' phase is ready to proceed to the 'extract' phase
+# UVM_INFO @ 336539.000ns: uvm_test_top.environment.digicore_scoreboard [SCBD] SCOREBOARD_RESULTS:  PREDICTED_TRANSACTIONS=67 MATCHES=67 MISMATCHES=0
+# UVM_INFO @ 336539.000ns: uvm_test_top.environment.i2c_a.i2c_a_coverage [COV] I2C register coverage: writes=100.00% (134 samples) reads=100.00% (67 samples) write_data=32.81% rw_x_addr=100.00% addr_x_data=44.65%
+# UVM_INFO @ 336539.000ns: uvm_test_top.environment.i2c_a.i2c_a_coverage [COV] OTP coverage: cmd_writes=25.00% (2 samples) otp_addr_writes=50.00% (2 samples) otp_status_reads=39.38% (2 samples) otp_status_writes=62.50% (2 samples) cmd_x_addr=18.75%
+# UVM_INFO @ 336539.000ns: uvm_test_top.environment.i2c_a.i2c_a_coverage [COV] Control coverage: wd_ctrl=75.00% (2 samples) sys_ctrl=25.00% (2 samples) int_ctrl=50.00% (2 samples) read_ptr=50.00% (69 samples)
+# UVM_INFO @ 336539.000ns: uvm_test_top.environment.i2c_a.i2c_a_coverage [COV] Test/invalid coverage: test_reg=100.00% (5 samples) test_key_seq=100.00% test_mode_access=75.00% (99 samples) invalid_access=0.00% (0 samples)
+# 
+# --- UVM Report Summary ---
+# 
+# ** Report counts by severity
+# UVM_INFO :  277
+# UVM_WARNING :    0
+# UVM_ERROR :    0
+# UVM_FATAL :    0
+# ** Report counts by id
+# [COV]     4
+# [PRED]   201
+# [Questa UVM]     2
+# [RNTST]     1
+# [SCBD]    68
+# [TEST_DONE]     1
+# ** Note: $finish    : /mnt/apps/public/COE/mg_apps/questa2026.1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh(430)
+#    Time: 336539 ns  Iteration: 60  Instance: /hvl_top
+# 1
+# Break in Task uvm_pkg/uvm_root::run_test at /mnt/apps/public/COE/mg_apps/questa2026.1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+# Stopped at /mnt/apps/public/COE/mg_apps/questa2026.1/questasim/linux_x86_64/../verilog_src/uvm-1.1d/src/base/uvm_root.svh line 430
+#  quit -f
+# 
+# Coverage saving has been started
+# Coverage database has been saved successfully.
+# Memory Statistics                         
+#     mem: size after elab (VSZ)                 428.21 Mb
+#     mem: size during sim (VSZ)                 428.21 Mb
+# Elaboration Time                          
+#    elab: wall time                               1.85 s
+#    elab: cpu time                                1.03 s
+# Simulation Time                           
+#     sim: wall time                               0.32 s
+#     sim: cpu time                                0.08 s
+# Coverage Save Time                        
+#    save: wall time                               0.42 s
+#    save: cpu time                                0.10 s
+# Total Time                                
+#   total: wall time                               2.59 s
+#   total: cpu time                                1.21 s
+# HDL Simulation time                              336539 ns
+# 
+# End time: 16:57:13 on Apr 01,2026, Elapsed time: 0:00:02
+# Errors: 0, Warnings: 0

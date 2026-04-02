@@ -1,0 +1,691 @@
+<?xml version="1.0"?>
+<?mso-application progid="Excel.Sheet"?>
+<Workbook xmlns="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:o="urn:schemas-microsoft-com:office:office"
+ xmlns:x="urn:schemas-microsoft-com:office:excel"
+ xmlns:ss="urn:schemas-microsoft-com:office:spreadsheet"
+ xmlns:html="http://www.w3.org/TR/REC-html40">
+ <DocumentProperties xmlns="urn:schemas-microsoft-com:office:office">
+  <Author>Team 35</Author>
+  <LastAuthor>Team 35</LastAuthor>
+  <Created>2026-04-01T00:00:00Z</Created>
+  <LastSaved>2026-04-01T00:00:00Z</LastSaved>
+  <Version>16.00</Version>
+ </DocumentProperties>
+ <OfficeDocumentSettings xmlns="urn:schemas-microsoft-com:office:office">
+  <AllowPNG/>
+ </OfficeDocumentSettings>
+ <ExcelWorkbook xmlns="urn:schemas-microsoft-com:office:excel">
+  <WindowHeight>10750</WindowHeight>
+  <WindowWidth>22560</WindowWidth>
+  <WindowTopX>32767</WindowTopX>
+  <WindowTopY>32767</WindowTopY>
+  <ProtectStructure>False</ProtectStructure>
+  <ProtectWindows>False</ProtectWindows>
+ </ExcelWorkbook>
+ <Styles>
+  <Style ss:ID="Default" ss:Name="Normal">
+   <Alignment ss:Vertical="Bottom"/>
+   <Borders/>
+   <Font ss:FontName="Arial"/>
+   <Interior/>
+   <NumberFormat/>
+   <Protection/>
+  </Style>
+  <Style ss:ID="s62">
+   <Alignment ss:Vertical="Center"/>
+   <Font ss:FontName="Arial" ss:Size="16" ss:Bold="1" ss:Underline="Single"/>
+  </Style>
+  <Style ss:ID="s63">
+   <Alignment ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Arial" ss:Size="12" ss:Bold="1"/>
+   <Interior ss:Color="#99CCFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s64">
+   <Alignment ss:Vertical="Center"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="2"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="2"/>
+   </Borders>
+   <Font ss:FontName="Arial" ss:Bold="1"/>
+   <Interior ss:Color="#CCFFFF" ss:Pattern="Solid"/>
+  </Style>
+  <Style ss:ID="s65">
+   <Alignment ss:Vertical="Center" ss:WrapText="1"/>
+   <Borders>
+    <Border ss:Position="Bottom" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Left" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Right" ss:LineStyle="Continuous" ss:Weight="1"/>
+    <Border ss:Position="Top" ss:LineStyle="Continuous" ss:Weight="1"/>
+   </Borders>
+  </Style>
+ </Styles>
+ <Worksheet ss:Name="Digicore Test Plan">
+  <Table ss:ExpandedColumnCount="9" ss:ExpandedRowCount="61" x:FullColumns="1"
+   x:FullRows="1" ss:DefaultColumnWidth="60" ss:DefaultRowHeight="18">
+   <Column ss:Index="2" ss:AutoFitWidth="0" ss:Width="70"/>
+   <Column ss:AutoFitWidth="0" ss:Width="220"/>
+   <Column ss:AutoFitWidth="0" ss:Width="420"/>
+   <Column ss:AutoFitWidth="0" ss:Width="280"/>
+   <Column ss:AutoFitWidth="0" ss:Width="100"/>
+   <Column ss:AutoFitWidth="0" ss:Width="70" ss:Span="1"/>
+   <Column ss:Index="9" ss:AutoFitWidth="0" ss:Width="100"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s62"><Data ss:Type="String">Digicore Verification Plan</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0"/>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s63"><Data ss:Type="String">Section</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Title</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Description</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Link</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Type</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Weight</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Goal</Data></Cell>
+    <Cell ss:StyleID="s63"><Data ss:Type="String">Owner</Data></Cell>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"><Data ss:Type="String">1</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Register Testing</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">1.1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Write Register Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover writes to all writable register locations.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_write_reg_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">1.2</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Write Register Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Per-register write hit coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_write_reg_cg:write_reg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">1.3</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Read Register Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover reads from all readable register locations.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_read_reg_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">1.4</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Read Register Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Per-register read hit coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_read_reg_cg:read_reg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">1.5</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Write Data Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover raw write data values observed on valid writes.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_write_data_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">95</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">1.6</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Write Data Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Auto-binned write data coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_write_data_cg:write_data</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">95</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">1.7</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">General Register Pattern Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Track interesting data patterns on general-purpose registers.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">general_reg_pattern_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">95</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">1.8</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">General Register Pattern Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">General register address bucket, data pattern bucket, and cross coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">general_reg_pattern_cg::general_reg_x_pattern</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">95</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">1.9</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Register Sweep Test</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Directed sweep of valid register space with readback checking.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">reg_map_sweep_test*</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Test</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"><Data ss:Type="String">2</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">I2C Transactions</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Read/Write by Address Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross access direction against address classes.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_rw_addr_cross_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.2</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Read/Write by Address Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Access kind, address class, and cross coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_rw_addr_cross_cg::rw_x_addr</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.3</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Address by Data Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross write data values against address classes.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_addr_data_cross_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">95</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.4</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Address by Data Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Address class, data bucket, and cross coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_addr_data_cross_cg::addr_x_data</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">95</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.5</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Indirect Read Pointer Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover legal and illegal indirect read pointer values.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_read_ptr_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.6</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Indirect Read Pointer Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Pointer legality bucket coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">i2c_read_ptr_cg:indirect_ptr</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.7</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Trim Register Access Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Track trim-register reads and writes.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">trim_reg_access_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.8</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Trim Register Access Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Access kind, trim address, and cross coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">trim_reg_access_cg::trim_access_x</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.9</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Control Register Access Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Track accesses to control and status registers.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ctrl_reg_access_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">2.10</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Control Register Access Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Access kind, control register, and cross coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">ctrl_reg_access_cg::ctrl_access_x</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"><Data ss:Type="String">3</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Watchdog Transactions</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">3.1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">WD_CTRL Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover watchdog programming fields.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">wd_ctrl_write_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">3.2</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">WD_CTRL Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Enable, kick, period, mask, and cross coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">wd_ctrl_write_cg::wd_x</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"><Data ss:Type="String">4</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">OTP Transactions</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Command Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover legal and illegal OTP command values.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_cmd_write_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.2</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Command Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Command bucket coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_cmd_write_cg:otp_cmd</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.3</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Address Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover OTP address ranges and out-of-range values.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_addr_write_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.4</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Address Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP address bucket coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_addr_write_cg:otp_addr</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.5</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Status Read Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover OTP status register read semantics.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_status_read_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.6</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Status Read Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Value bucket and individual status-bit coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_status_read_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">CoverGroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.7</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Status Write Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover writable upper bits and illegal lower-bit write attempts.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_status_write_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.8</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Status Write Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Upper writable bits and lower illegal-write coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_status_write_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">CoverGroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.9</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Command by Address Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross OTP command values against programmed addresses.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_cmd_addr_cross_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">4.10</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Command by Address Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Command bucket, address bucket, and cross coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">otp_cmd_addr_cross_cg::otp_cmd_x_addr</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"><Data ss:Type="String">5</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Control and Test Mode</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">SYS_CTRL Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover software reset intent and payload usage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">sys_ctrl_write_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.2</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">SYS_CTRL Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Reset bit and payload coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">sys_ctrl_write_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">CoverGroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.3</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">INT_CTRL Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover legal writable INT_CTRL field values.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">int_ctrl_write_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.4</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">INT_CTRL Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Writable field bucket coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">int_ctrl_write_cg:int_bits</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.5</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">INT_CTRL Reserved Attempt Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Track reserved-bit write attempts on INT_CTRL.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">int_ctrl_reserved_attempt_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.6</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">INT_CTRL Reserved Attempt Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Reserved-bit presence coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">int_ctrl_reserved_attempt_cg:reserved_attempt</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.7</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">TEST_REG Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cover key values written into TEST_REG.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">test_reg_write_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.8</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">TEST_REG Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Key value coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">test_reg_write_cg:test_key</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.9</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Test Key Sequence Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Track complete and incomplete entry-key sequences.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">test_key_sequence_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.10</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Test Key Sequence Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Previous key values, current key, and entry-sequence cross.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">test_key_sequence_cg::enter_test_mode</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.11</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Test Mode Access Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Track accesses while inferred test mode is active.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">test_mode_access_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">5.12</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Test Mode Access Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Trim and control register coverage while in test mode.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">test_mode_access_cg:test_mode_reg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Coverpoint</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"><Data ss:Type="String">6</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Invalid Transactions</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">6.1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Invalid Access Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Track reserved and above-map address accesses.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">invalid_access_cg</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Covergroup</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">6.2</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Invalid Access Coverpoints</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Access kind, invalid address bucket, and cross coverage.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">invalid_access_cg::invalid_x</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Cross</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s64"><Data ss:Type="String">7</Data></Cell>
+    <Cell ss:StyleID="s64"><Data ss:Type="String">Code Coverage</Data></Cell>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+    <Cell ss:StyleID="s64"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">7.1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Top RTL Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Collect line, branch, expression, toggle, and FSM coverage on the full DUT.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">/hdl_top/dut_verilog</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Instance</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">100</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">7.2</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">FSM Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Collect state and transition coverage on the control FSM.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">/hdl_top/dut_verilog/reg_map_top_inst/fsm_inst</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Instance</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">7.3</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">I2C Slave Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Collect structural coverage on the I2C slave interface block.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">/hdl_top/dut_verilog/i2c_slave_inst</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Instance</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">7.4</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Register Map Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Collect structural coverage on register map logic.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">/hdl_top/dut_verilog/reg_map_top_inst</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Instance</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">7.5</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">OTP Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Collect structural coverage on OTP controller and model blocks.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">/hdl_top/dut_verilog/otp_ctrl_inst</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Instance</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+   <Row ss:AutoFitHeight="0">
+    <Cell ss:Index="2" ss:StyleID="s65"><Data ss:Type="String">7.6</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Watchdog Coverage</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Collect structural coverage on watchdog logic.</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">/hdl_top/dut_verilog/wd_inst</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="String">Instance</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">1</Data></Cell>
+    <Cell ss:StyleID="s65"><Data ss:Type="Number">90</Data></Cell>
+    <Cell ss:StyleID="s65"/>
+   </Row>
+  </Table>
+  <WorksheetOptions xmlns="urn:schemas-microsoft-com:office:excel">
+   <Unsynced/>
+   <Selected/>
+   <TopRowVisible>41</TopRowVisible>
+   <Panes>
+    <Pane>
+     <Number>3</Number>
+     <ActiveRow>63</ActiveRow>
+     <ActiveCol>3</ActiveCol>
+    </Pane>
+   </Panes>
+   <ProtectObjects>False</ProtectObjects>
+   <ProtectScenarios>False</ProtectScenarios>
+  </WorksheetOptions>
+ </Worksheet>
+</Workbook>

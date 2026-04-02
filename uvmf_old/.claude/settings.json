@@ -1,0 +1,14 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -)",
+      "Bash(python3 /tmp/fix_testplan.py)",
+      "Bash(echo \"exit: $?\")",
+      "Bash(xml2ucdb -format Excel /mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/project_benches/digicore/sim/digicore_test_plan.xml /tmp/test_verify.ucdb)",
+      "Read(//mnt/ncsudrive/j/jrainon/ece-485/UVMF_2023.4_2/digi_sb/uvmf_old/**)"
+    ],
+    "additionalDirectories": [
+      "/tmp"
+    ]
+  }
+}

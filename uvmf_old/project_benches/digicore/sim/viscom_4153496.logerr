@@ -1,0 +1,16 @@
+VISCOM: Start time: 16:07:33 on Apr 01,2026
+
+VISCOM: QuestaSim /mnt/apps/public/COE/mg_apps/questa2026.1/questasim/linux_x86_64/VisualizerRls/bin/viscom 2026.1 at 2026.01 Jan 25 2026
+VISCOM: Writing design.bin
+# Current time Wed Apr  1 16:07:36 2026
+# Program = viscom
+# Id = "2026.1"
+# Version = "2026.01"
+# Date = "Jan 25 2026"
+# Platform = "linux_x86_64"
+# Signature = 677447527dd0345ae168d6b4e63ed947
+#  0 0x000000000043f890 '<unknown (@0x43f890)>'
+# End of Stack Trace
+
+VISCOM: 1 errors detected, design.bin could not be created.
+
